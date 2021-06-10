@@ -3,39 +3,47 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from "gatsby"
 
 const QuerySection = styled.div`
-margin-top: 2.5rem;
 display: flex;
-flex-direction: column-reverse;
+flex-direction: column;
 align-items: center;
 .title{
   color: white;
   background: black;
-  margin-top: -73%;
+  margin-top: -37rem;
+
 }
 `
 const Step = styled.div`
-padding: 1rem;
+padding: 3rem;
 align-items: center;
 display: flex;
-flex-direction: column;
+/* flex-direction: column; */
+
 `
 const Title = styled.h1`
 letter-spacing: 4px;
 font-size: 3rem;
 width: calc(9rem + 9vw) ;
-text-align: center;
 font-family: shuriken-std, sans-serif;
 font-weight: 400;
 font-style: normal;
 `
 const Directions = styled.p`
-width: calc(9rem + 9vw) ;
+/* width: 50%; */
+padding: 1rem;
 text-align: center;
 font-size: 1.2rem;
+`
+
+const DirectionContainer = styled.div`
+width: 35rem;
+height: 15rem;
+overflow: scroll;
 `
 const Example = styled.img`
 width: calc(9rem + 9vw) ;
 height: calc(4rem + 7vw) ;
+margin-left: 1rem;
 `
 const ExampleQuery = ({title}) => {
 // const data = useStaticQuery(graphql`
@@ -101,7 +109,9 @@ let stepData = allStepData.allContentfulDirectionPost.nodes.map(d => {
      
           <Step>
           <Title>{step.name}</Title>
+          <DirectionContainer>
           <Directions>{step.directions.directions}</Directions>
+          </DirectionContainer>
           <Example src={step.photoExample.fluid.src} />
           </Step>
         </div>

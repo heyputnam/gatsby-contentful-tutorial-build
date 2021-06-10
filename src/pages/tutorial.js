@@ -6,8 +6,8 @@ import Layout from '../globalStyle'
 
 const Tutorial = styled.div`
 display: flex;
-position: absolute;
-height: 15vw;
+position: relative;
+height: 100vw;
 
 `
 const Nav = styled.nav`
@@ -29,17 +29,15 @@ a{
 }
 `
 const Container = styled.div`
-display: flex;
 justify-content: center;
-margin-left: calc(6rem + 6vw);
-
-display: flex;
 flex-direction: column;
+display: flex;
+margin-top: 14rem;
 `
 const Title = styled.h1`
 font-size: 3rem;
-align-content: center;
-justify-content: center;
+/* align-content: center;
+justify-content: center; */
 text-align: center;
 p{
     font-size: 1.7rem;
@@ -48,19 +46,18 @@ p{
 const TutorialPage = ({children}) => {
   return (
       <Layout>
-  
+   <Title><h1>Tutorial Page</h1>
+        <p>(this is the good stuff!)</p>
+    </Title>
     <Tutorial>
-        <section style={{marginTop: "25%"}}>
+        <section>
     <Nav>
          <Link to="/">click to go home</Link>
     </Nav>
     </section>
-    
     <Container>
-    <Title><h1>Tutorial Page</h1>
-        <p>(this is the good stuff!)</p>
-    </Title>
-     <ExampleQuery  title={"adding content to query with graphQl from contentful"}/>
+
+     <ExampleQuery  title={"adding content from Contentful to query using graphQl"}/>
      </Container>
     </Tutorial>
     </Layout>

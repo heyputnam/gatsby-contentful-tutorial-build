@@ -20,22 +20,13 @@ font-size: 3rem;
 width: calc(9rem + 9vw) ;
 text-align: center;
 font-family: shuriken-std, sans-serif;
-
 font-weight: 400;
-
 font-style: normal;
-
 `
 const Directions = styled.p`
 width: calc(9rem + 9vw) ;
 text-align: center;
 font-size: 1.2rem;
-margin-top: -1rem;
-font-family: input-sans, sans-serif;
-
-font-weight: 400;
-
-font-style: normal;
 `
 const Example = styled.img`
 width: calc(9rem + 9vw) ;

@@ -10,7 +10,7 @@ align-items: center;
 .title{
   color: white;
   background: black;
-  margin-top: -97%;
+  margin-top: -73%;
 }
 `
 const Step = styled.div`

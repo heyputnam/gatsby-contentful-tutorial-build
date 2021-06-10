@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { useStaticQuery, graphql } from "gatsby"
 
 const QuerySection = styled.div`
@@ -49,7 +48,7 @@ const ExampleQuery = () => {
 
 
 // `)
-const data2 = useStaticQuery(graphql`
+const allStepData = useStaticQuery(graphql`
 query MyQuery {
   allContentfulDirectionPost {
     nodes {
@@ -74,31 +73,25 @@ query MyQuery {
 
 `
   )
-
 // let g = data.allContentfulTutorialDirections.edges[0].node
-let f = data2.allContentfulDirectionPost.nodes.map(d => {
+let stepData = allStepData.allContentfulDirectionPost.nodes.map(d => {
   return(d.steps)
 })
-
-console.log(f)
+// console.log(f)
     return(
       <QuerySection>
-      {f.map(d => {
+      {stepData.map(step => {
         return(
-          <div key={d.name}>
-     
+          <div key={step.name}>
           <Step>
-          <Title>{d.name}</Title>
-          <Directions>{d.directions.directions}</Directions>
-          <Example src={d.photoExample.fluid.src} />
+          <Title>{step.name}</Title>
+          <Directions>{step.directions.directions}</Directions>
+          <Example src={step.photoExample.fluid.src} />
           </Step>
-        
-
         </div>
-       
        ) })}
   </QuerySection>
     )
-}
+  }
 
 export default ExampleQuery;

@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const QuerySection = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: column-reverse;
 align-items: center;
 
 `
@@ -15,13 +15,31 @@ display: flex;
 flex-direction: column;
 `
 const Title = styled.h1`
+letter-spacing: 4px;
+font-size: 3rem;
+width: calc(9rem + 9vw) ;
+text-align: center;
+font-family: shuriken-std, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
 
 `
 const Directions = styled.p`
+width: calc(9rem + 9vw) ;
+text-align: center;
+font-size: 1.2rem;
+margin-top: -1rem;
+font-family: input-sans, sans-serif;
 
+font-weight: 400;
+
+font-style: normal;
 `
 const Example = styled.img`
-
+width: calc(9rem + 9vw) ;
+height: calc(4rem + 7vw) ;
 `
 const ExampleQuery = () => {
 // const data = useStaticQuery(graphql`

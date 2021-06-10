@@ -10,7 +10,6 @@ text-align: center; */
 display: flex;
 height: 40vh;
 `
-
 const Nav = styled.nav`
 background: black;
 margin-top: 22%;

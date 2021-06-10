@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from "gatsby"
 
 const QuerySection = styled.div`
+margin-top: 1.5rem;
 display: flex;
 flex-direction: column-reverse;
 align-items: center;

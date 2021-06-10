@@ -3,11 +3,15 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from "gatsby"
 
 const QuerySection = styled.div`
-margin-top: 1.5rem;
+margin-top: 2.5rem;
 display: flex;
 flex-direction: column-reverse;
 align-items: center;
-
+.title{
+  color: white;
+  background: black;
+  margin-top: -97%;
+}
 `
 const Step = styled.div`
 padding: 1rem;
@@ -33,7 +37,7 @@ const Example = styled.img`
 width: calc(9rem + 9vw) ;
 height: calc(4rem + 7vw) ;
 `
-const ExampleQuery = () => {
+const ExampleQuery = ({title}) => {
 // const data = useStaticQuery(graphql`
 // query DirectionQuery {
 //   allContentfulTutorialDirections {
@@ -90,9 +94,11 @@ let stepData = allStepData.allContentfulDirectionPost.nodes.map(d => {
 // console.log(f)
     return(
       <QuerySection>
+           <h1 className="title">{title}</h1>
       {stepData.map(step => {
         return(
           <div key={step.name}>
+     
           <Step>
           <Title>{step.name}</Title>
           <Directions>{step.directions.directions}</Directions>

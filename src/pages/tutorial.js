@@ -58,7 +58,7 @@ const TutorialPage = ({children}) => {
     <Title><h1>Tutorial Page</h1>
         <p>(this is the good stuff!)</p>
     </Title>
-     <ExampleQuery  />
+     <ExampleQuery  title={"adding content to query with contentful"}/>
      </Container>
     </Tutorial>
     </Layout>

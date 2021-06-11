@@ -57,7 +57,7 @@ const TutorialPage = ({children}) => {
     </section>
     <Container>
 
-     <ExampleQuery  title={"adding content from Contentful to query using graphQl"}/>
+     <ExampleQuery  title={"adding content from Contentful to query using graphQl"} />
      </Container>
     </Tutorial>
     </Layout>

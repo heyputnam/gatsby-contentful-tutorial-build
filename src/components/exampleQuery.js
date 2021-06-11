@@ -6,10 +6,11 @@ const QuerySection = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+height: 100vw;
 .title{
   color: white;
   background: black;
-  margin-top: -37rem;
+  margin-right: 7em;
 
 }
 `
@@ -41,9 +42,10 @@ height: 15rem;
 overflow: scroll;
 `
 const Example = styled.img`
-width: calc(9rem + 9vw) ;
-height: calc(4rem + 7vw) ;
+width: 30%;
+height: 50%;
 margin-left: 1rem;
+
 `
 const ExampleQuery = ({title}) => {
 // const data = useStaticQuery(graphql`
@@ -72,20 +74,17 @@ const ExampleQuery = ({title}) => {
 // `)
 const allStepData = useStaticQuery(graphql`
 query MyQuery {
-  allContentfulDirectionPost {
+  allContentfulContentfulsteps {
     nodes {
       steps {
-        id
         name
         photoExample {
           fluid {
             src
           }
-          contentful_id
         }
         directions {
           directions
-          id
         }
       }
     }
@@ -96,7 +95,7 @@ query MyQuery {
 `
   )
 // let g = data.allContentfulTutorialDirections.edges[0].node
-let stepData = allStepData.allContentfulDirectionPost.nodes.map(d => {
+let stepData = allStepData.allContentfulContentfulsteps.nodes.map(d => {
   return(d.steps)
 })
 // console.log(f)
@@ -112,7 +111,7 @@ let stepData = allStepData.allContentfulDirectionPost.nodes.map(d => {
           <DirectionContainer>
           <Directions>{step.directions.directions}</Directions>
           </DirectionContainer>
-          <Example src={step.photoExample.fluid.src} />
+          <Example src={step.photoExample.fluid.src} height={400} width={400} className={step.name}/>
           </Step>
         </div>
        ) })}

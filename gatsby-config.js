@@ -13,5 +13,13 @@ module.exports = {
       accessToken: `-f8y8IolYr8DsmLSmNiGcD_N0hC4mv52JZAEymNoIW8`,
     },
   },
+  {
+    resolve: "gatsby-plugin-web-font-loader",
+    options: {
+      typekit: {
+        id: "dqt3sqg",
+      },
+    },
+  },
 ],
 };

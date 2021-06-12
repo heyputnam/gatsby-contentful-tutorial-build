@@ -28,7 +28,6 @@ padding: 3rem;
 align-items: center;
 display: flex;
 
-/* flex-direction: column; */
 
 `
 const Title = styled.p`
@@ -40,7 +39,7 @@ font-weight: 400;
 font-style: normal;
 `
 const Directions = styled.div`
-/* width: 50%; */
+
 padding: 1rem;
 text-align: center;
 font-size: 1.2rem;
@@ -84,7 +83,7 @@ query MyQuery {
 
 `
   )
-  const website_url = ''
+
   const options = {
     renderNode: {
       // hyperlinks to web pages supported 
@@ -98,14 +97,20 @@ query MyQuery {
       // code blocks formated
       console.log(node)
       return(
-     
-          <pre style={{background: 'darkgrey'}}>
+      
+       
+          <pre style={{background: '#333333',
+                       display: 'block'  ,
+                        padding: '0.2rem 0 0 0.6rem',
+                       textAlign: 'left',}}>
           <code style={{color: 'white'}}>{node}</code>
           </pre>
+         
       )
     }
   }
   }
+  // mapping query's can probably go back and clean this up
   const rawQuery = stepQuery.allContentfulContentfulsteps.edges.map( query =>{
     return(
       query.node.steps.richDirections.raw,
@@ -114,11 +119,10 @@ query MyQuery {
     )
   } )
  
-let stepData = stepQuery.allContentfulContentfulsteps.edges.map(d => {
+  const stepData = stepQuery.allContentfulContentfulsteps.edges.map(d => {
   return(d.node.steps)
-})
-// console.log(stepData)
-const trueData = stepData.map(data => {
+  })
+  const trueData = stepData.map(data => {
   return(
     data
   )
@@ -136,6 +140,7 @@ const trueData = stepData.map(data => {
           <Title>{rich.name}</Title>
           <DirectionContainer>
             <Directions key={rich.richDirections.raw}>
+              {/* this is the important part for rendering the text */}
            {renderRichText(rich.richDirections, options)}
             </Directions>
           </DirectionContainer>

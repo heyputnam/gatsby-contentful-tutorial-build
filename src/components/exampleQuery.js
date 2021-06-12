@@ -1,8 +1,8 @@
 import React from 'react'
-import { render } from 'react-dom'
+
 import styled from 'styled-components'
-import { useStaticQuery, graphql, Link, Img } from "gatsby"
-import {BLOCKS, MARKS, INLINES} from '@contentful/rich-text-types'
+import { useStaticQuery, graphql } from "gatsby"
+import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, dracula } from 'react-code-blocks'
 
@@ -79,9 +79,6 @@ query MyQuery {
           fluid {
             src
           }
-        }
-        directions {
-          directions
         }
       }
     }

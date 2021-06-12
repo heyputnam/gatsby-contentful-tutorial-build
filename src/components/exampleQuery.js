@@ -5,17 +5,26 @@ import { useStaticQuery, graphql, Link, Img } from "gatsby"
 import {BLOCKS, MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, dracula } from 'react-code-blocks'
+
+
+const TutorialName = styled.h1`
+text-align: center;
+margin-left: -15.5rem;
+
+background: black;
+color: white;
+
+
+
+`
+
 const QuerySection = styled.div`
 display: flex;
-flex-direction: column;
-align-items: center;
-height: 100vw;
-.title{
-  color: white;
-  background: black;
-  margin-right: 7em;
+flex-direction: column-reverse;
+margin-top: 0rem;
+height: 100vh;
+/* margin-top: 3rem; */
 
-}
 `
 const StepContainer = styled.div`
 display: flex;
@@ -130,11 +139,20 @@ query MyQuery {
 })
 // console.log(rawData.raw)
     return(
+      <>
+      <div style={{marginLeft: '22%',
+                  marginRight: '22%'}}>
+      <TutorialName className="title">{title}</TutorialName>
+      </div>
       <QuerySection>
-           <h1 className="title">{title}</h1>
+       
+          
             {trueData.map(rich =>{
             console.log(rich)
             return(
+     
+            
+      
               <StepContainer >
               <div key={rich.name}>
           <Step>
@@ -149,10 +167,13 @@ query MyQuery {
           </Step>
         </div>
         </StepContainer>
+    
        ) })}
-        
+   
   </QuerySection>
+              </>
     )
+
   }
 
 export default StepDirections;

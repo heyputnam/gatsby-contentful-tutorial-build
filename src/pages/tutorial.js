@@ -7,7 +7,7 @@ import Layout from '../globalStyle'
 const Tutorial = styled.div`
 display: flex;
 position: relative;
-height: 100vw;
+height: 75vh;
 
 `
 const Nav = styled.nav`

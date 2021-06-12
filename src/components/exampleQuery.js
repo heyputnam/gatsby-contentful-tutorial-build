@@ -20,6 +20,7 @@ height: 100vw;
 const StepContainer = styled.div`
 display: flex;
 background-color: aliceblue;
+margin-right: 15%;
 flex-direction: row;
 `
 const Step = styled.div`
@@ -30,7 +31,7 @@ display: flex;
 /* flex-direction: column; */
 
 `
-const Title = styled.h1`
+const Title = styled.p`
 letter-spacing: 4px;
 font-size: 3rem;
 width: calc(9rem + 9vw) ;
@@ -92,7 +93,20 @@ query MyQuery {
       [INLINES. HYPERLINK]: (node, children) => {
         return <a href={`${node.data.uri}`}  key={children}>{(children)}</a>;
       }
+     
+    },
+    renderMark: {
+    [MARKS.CODE]: (node)=>{
+      // code blocks formated
+      console.log(node)
+      return(
+     
+          <pre style={{background: 'black'}}>
+          <code style={{color: 'white'}}>{node}</code>
+          </pre>
+      )
     }
+  }
   }
   const rawQuery = myquery.allContentfulContentfulsteps.edges.map( query =>{
     return(
@@ -116,8 +130,7 @@ const trueData = stepData.map(data => {
 // console.log(rawData.raw)
     return(
       <QuerySection>
-           <h2 className="title">{title}</h2>
-           <a href="https://www.google.com">hi</a>
+           <h1 className="title">{title}</h1>
             {trueData.map(rich =>{
             console.log(rich)
             return(

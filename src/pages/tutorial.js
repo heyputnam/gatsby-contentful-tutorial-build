@@ -1,13 +1,13 @@
 import { Link } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
-import ExampleQuery from '../components/exampleQuery'
+import StepDirections from '../components/exampleQuery'
 import Layout from '../globalStyle'
 
 const Tutorial = styled.div`
 display: flex;
 position: relative;
-height: 100vw;
+height: 75vh;
 
 `
 const Nav = styled.nav`
@@ -34,7 +34,7 @@ flex-direction: column;
 display: flex;
 margin-top: 14rem;
 `
-const Title = styled.h1`
+const Title = styled.p`
 font-size: 3rem;
 /* align-content: center;
 justify-content: center; */
@@ -45,7 +45,7 @@ p{
 `
 const TutorialPage = ({children}) => {
   return (
-      <Layout>
+  <Layout>
    <Title><h1>Tutorial Page</h1>
         <p>(this is the good stuff!)</p>
     </Title>
@@ -57,10 +57,10 @@ const TutorialPage = ({children}) => {
     </section>
     <Container>
 
-     <ExampleQuery  title={"adding content from Contentful to query using graphQl"}/>
+     <StepDirections  title={"adding content from Contentful to query using graphQl"} />
      </Container>
     </Tutorial>
-    </Layout>
+  </Layout>
   )
 }
 

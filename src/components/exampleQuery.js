@@ -20,7 +20,7 @@ color: white;
 
 const QuerySection = styled.div`
 display: flex;
-flex-direction: column-reverse;
+flex-direction: column;
 margin-top: 0rem;
 height: 100vh;
 /* margin-top: 3rem; */

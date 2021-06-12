@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql, Link, Img } from "gatsby"
 import {BLOCKS, MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
-
+import { CopyBlock, dracula } from 'react-code-blocks'
 const QuerySection = styled.div`
 display: flex;
 flex-direction: column;
@@ -19,7 +19,6 @@ height: 100vw;
 `
 const StepContainer = styled.div`
 display: flex;
-background-color: aliceblue;
 margin-right: 15%;
 flex-direction: row;
 `
@@ -45,8 +44,8 @@ text-align: center;
 font-size: 1.2rem;
 `
 const DirectionContainer = styled.div`
-width: 35rem;
-height: 15rem;
+width: 40rem;
+height: 20rem;
 overflow: scroll;
 `
 const Example = styled.img`
@@ -97,14 +96,16 @@ query MyQuery {
       // code blocks formated
       console.log(node)
       return(
-      
-       
-          <pre style={{background: '#333333',
-                       display: 'block'  ,
-                        padding: '0.2rem 0 0 0.6rem',
-                       textAlign: 'left',}}>
-          <code style={{color: 'white'}}>{node}</code>
-          </pre>
+        <CopyBlock
+        language="javascript"
+        text={node}
+        wrapLines={false}
+        codeBlock
+        codeContainerStyle={{textAlign: 'left', fontSize: '15px'}}
+        theme={dracula}
+        showLineNumbers={false}
+    
+      />
          
       )
     }
@@ -149,7 +150,7 @@ query MyQuery {
         </div>
         </StepContainer>
        ) })}
-       
+        
   </QuerySection>
     )
   }

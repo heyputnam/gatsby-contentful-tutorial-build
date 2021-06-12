@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
-import ExampleQuery from '../components/exampleQuery'
+import StepDirections from '../components/exampleQuery'
 import Layout from '../globalStyle'
 
 const Tutorial = styled.div`
@@ -57,7 +57,7 @@ const TutorialPage = ({children}) => {
     </section>
     <Container>
 
-     <ExampleQuery  title={"adding content from Contentful to query using graphQl"} />
+     <StepDirections  title={"adding content from Contentful to query using graphQl"} />
      </Container>
     </Tutorial>
   </Layout>

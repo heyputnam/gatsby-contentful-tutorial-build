@@ -56,9 +56,8 @@ height: 50%;
 margin-left: 1rem;
 
 `
-const ExampleQuery = ({title}) => {
-
-const myquery = useStaticQuery(graphql`
+const StepDirections = ({title}) => {
+const stepQuery = useStaticQuery(graphql`
 query MyQuery {
   allContentfulContentfulsteps {
     edges{
@@ -85,7 +84,6 @@ query MyQuery {
 
 `
   )
-
   const website_url = ''
   const options = {
     renderNode: {
@@ -101,14 +99,14 @@ query MyQuery {
       console.log(node)
       return(
      
-          <pre style={{background: 'black'}}>
+          <pre style={{background: 'darkgrey'}}>
           <code style={{color: 'white'}}>{node}</code>
           </pre>
       )
     }
   }
   }
-  const rawQuery = myquery.allContentfulContentfulsteps.edges.map( query =>{
+  const rawQuery = stepQuery.allContentfulContentfulsteps.edges.map( query =>{
     return(
       query.node.steps.richDirections.raw,
       console.log( query.node.steps.richDirections.raw)
@@ -116,9 +114,7 @@ query MyQuery {
     )
   } )
  
-
-  
-let stepData = myquery.allContentfulContentfulsteps.edges.map(d => {
+let stepData = stepQuery.allContentfulContentfulsteps.edges.map(d => {
   return(d.node.steps)
 })
 // console.log(stepData)
@@ -153,5 +149,5 @@ const trueData = stepData.map(data => {
     )
   }
 
-export default ExampleQuery;
+export default StepDirections;
 

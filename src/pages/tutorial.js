@@ -3,6 +3,7 @@ import * as React from "react"
 import styled from "styled-components"
 import StepDirections from '../components/exampleQuery'
 import Layout from '../globalStyle'
+import NavBar from '../components/navBar'
 
 const Tutorial = styled.div`
 display: flex;
@@ -46,18 +47,12 @@ p{
 const TutorialPage = ({children}) => {
   return (
   <Layout>
+    <NavBar />
    <Title><h1>Tutorial Page</h1>
         <p>(this is the good stuff!)</p>
     </Title>
     <Tutorial>
-        <section>
-    <Nav>
-         <Link to="/">click to go home</Link>
-    </Nav>
-    </section>
     <Container>
-
-     <StepDirections  title={"adding content from Contentful to query using graphQl"} />
      </Container>
     </Tutorial>
   </Layout>

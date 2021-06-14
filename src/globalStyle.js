@@ -1,6 +1,7 @@
 import * as React from "react"
 import { createGlobalStyle } from "styled-components"
 
+
 const GlobalStyle = createGlobalStyle`
 :root{
    /* put color pallette variables here */
@@ -87,6 +88,7 @@ const Layout = ({children}) => {
     return(
         <>
       <GlobalStyle/>
+    
           {children}
   
         </>

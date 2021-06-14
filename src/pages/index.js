@@ -10,13 +10,19 @@ justify-content: center;
 text-align: center; */
 display: flex;
 height: 75vh;
+justify-content: center;
 `
 const Title = styled.h1`
-font-size: 10rem;
-margin-left: calc(4rem + 3vw);
-align-content: center;
-justify-content: center;
+font-size: 9.5rem;
 text-align: center;
+
+.highlight{
+  background: #bc13fe;
+  color: white;
+  margin-left: 25%;
+  width: 50%;
+}
+
 `
 const IndexPage = ({children}) => {
   return (
@@ -24,7 +30,7 @@ const IndexPage = ({children}) => {
     <NavBar/>
     <HomePage>
       <div>
-      <Title>Welcome to <div>all</div> about the <p>Great</p> Gatsby.js</Title>
+      <Title>Welcome to <p className="highlight">all</p> about the <p className="highlight">Great</p> Gatsby.js</Title>
      </div>
      </HomePage>
     </Layout>

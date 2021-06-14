@@ -9,10 +9,10 @@ import { CopyBlock, dracula } from 'react-code-blocks'
 
 const TutorialName = styled.h1`
 text-align: center;
-margin-left: -15.5rem;
-
 background: black;
 color: white;
+font-size: 1.5rem;
+margin-top: 2rem;
 
 
 
@@ -21,8 +21,8 @@ color: white;
 const QuerySection = styled.div`
 display: flex;
 flex-direction: column;
-margin-top: 0rem;
-height: 100vh;
+text-align: center;
+
 /* margin-top: 3rem; */
 
 `
@@ -30,6 +30,7 @@ const StepContainer = styled.div`
 display: flex;
 margin-right: 15%;
 flex-direction: row;
+
 `
 const Step = styled.div`
 padding: 3rem;
@@ -141,7 +142,8 @@ query MyQuery {
                   marginRight: '22%'}}>
       <TutorialName className="title">{title}</TutorialName>
       </div>
-      <QuerySection>
+      <QuerySection style={{marginLeft: '15%',
+                  marginRight: '10%'}}>
        
           
             {trueData.map(rich =>{

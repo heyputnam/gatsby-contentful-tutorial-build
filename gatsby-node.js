@@ -8,6 +8,7 @@ exports.createPages = ({graphql, actions: { createPage }}) =>{
             edges {
                 node {
                   id
+                  name
                 }
               }
         }
@@ -16,7 +17,7 @@ exports.createPages = ({graphql, actions: { createPage }}) =>{
     `).then((result)=>{
         result.data.steps.edges.forEach(({node})=>{
             createPage({
-                path: node.id,
+                path: `/tutorial/${node.id}`,
                 component: path.resolve('./src/templates/tutorial.js'),
                 context:{
                     id: node.id,

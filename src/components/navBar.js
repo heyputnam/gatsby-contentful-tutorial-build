@@ -36,7 +36,7 @@ const NavBar = () => {
             <Title>low-budget Tutorials👏👏</Title>
         </Logo>
           <Nav>
-            <a href="/tutorial">tutorials 🧠</a>
+            <a href="/tutorials">tutorials 🧠</a>
             <a href="/">home</a>
         </Nav>
         </Headers>

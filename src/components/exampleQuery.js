@@ -20,7 +20,7 @@ margin-top: 2rem;
 
 const QuerySection = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: column-reverse;
 text-align: center;
 
 /* margin-top: 3rem; */

@@ -67,7 +67,7 @@ margin-left: 1rem;
 const StepDirections = ({title}) => {
 const stepQuery = useStaticQuery(graphql`
 query MyQuery {
-  allContentfulContentfulsteps {
+  allContentfulSteps {
     edges{
     node {
       steps {
@@ -118,16 +118,17 @@ query MyQuery {
     }
   }
   }
+
   // mapping query's can probably go back and clean this up
-  const rawQuery = stepQuery.allContentfulContentfulsteps.edges.map( query =>{
+  const rawQuery = stepQuery.allContentfulSteps.edges.map( query => {
     return(
-      query.node.steps.richDirections.raw,
+      query.node.steps.richDirections,
       console.log( query.node.steps.richDirections.raw)
     
     )
   } )
  
-  const stepData = stepQuery.allContentfulContentfulsteps.edges.map(d => {
+  const stepData = stepQuery.allContentfulSteps.edges.map(d => {
   return(d.node.steps)
   })
   const trueData = stepData.map(data => {

@@ -1,28 +1,29 @@
-// import * as React from 'react'
-// import Layout from '../globalStyle'
-// import { graphql } from 'gatsby' 
+import * as React from 'react'
+import Layout from '../globalStyle'
+import { graphql } from 'gatsby' 
 
 
-// const Tutorial = ({data}) =>{
+const Tutorial = ({data}) =>{
 
-// return(
+return(
   
-//     <>
-//     <Layout>
-//     <h1>name: {data.contentfulTutorialDirections.name}</h1>
-//     </Layout>
-//     </>
-// )
-// }
+    <>
+    <Layout>
+      <h1>tutorial name: {data.contentfulLesson.name}</h1>
+    </Layout>
+    </>
+)
+}
 
-// export const query = graphql`
-// query ($id: String!){
-//    contentfulTutorialDirections(id: {eq: $id}){
-//         name
-//           }
-// }
+export const query = graphql`
+query ($slug: String!){
+   contentfulLesson(slug: {eq: $slug}){
+            name
+            slug
+      }
+   }
 
-// `
+`
 
-// export default Tutorial; 
+export default Tutorial; 
 

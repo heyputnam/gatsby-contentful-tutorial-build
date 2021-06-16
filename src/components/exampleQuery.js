@@ -1,18 +1,18 @@
 import React from 'react'
-import { render } from 'react-dom'
+
 import styled from 'styled-components'
-import { useStaticQuery, graphql, Link, Img } from "gatsby"
-import {BLOCKS, MARKS, INLINES} from '@contentful/rich-text-types'
+import { useStaticQuery, graphql } from "gatsby"
+import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, dracula } from 'react-code-blocks'
 
 
 const TutorialName = styled.h1`
 text-align: center;
-margin-left: -15.5rem;
-
 background: black;
 color: white;
+font-size: 1.5rem;
+margin-top: 2rem;
 
 
 
@@ -21,8 +21,8 @@ color: white;
 const QuerySection = styled.div`
 display: flex;
 flex-direction: column-reverse;
-margin-top: 0rem;
-height: 100vh;
+text-align: center;
+
 /* margin-top: 3rem; */
 
 `
@@ -30,6 +30,7 @@ const StepContainer = styled.div`
 display: flex;
 margin-right: 15%;
 flex-direction: row;
+
 `
 const Step = styled.div`
 padding: 3rem;
@@ -66,7 +67,7 @@ margin-left: 1rem;
 const StepDirections = ({title}) => {
 const stepQuery = useStaticQuery(graphql`
 query MyQuery {
-  allContentfulContentfulsteps {
+  allContentfulSteps {
     edges{
     node {
       steps {
@@ -79,9 +80,6 @@ query MyQuery {
           fluid {
             src
           }
-        }
-        directions {
-          directions
         }
       }
     }
@@ -120,16 +118,17 @@ query MyQuery {
     }
   }
   }
+
   // mapping query's can probably go back and clean this up
-  const rawQuery = stepQuery.allContentfulContentfulsteps.edges.map( query =>{
+  const rawQuery = stepQuery.allContentfulSteps.edges.map( query => {
     return(
-      query.node.steps.richDirections.raw,
+      query.node.steps.richDirections,
       console.log( query.node.steps.richDirections.raw)
     
     )
   } )
  
-  const stepData = stepQuery.allContentfulContentfulsteps.edges.map(d => {
+  const stepData = stepQuery.allContentfulSteps.edges.map(d => {
   return(d.node.steps)
   })
   const trueData = stepData.map(data => {
@@ -144,7 +143,8 @@ query MyQuery {
                   marginRight: '22%'}}>
       <TutorialName className="title">{title}</TutorialName>
       </div>
-      <QuerySection>
+      <QuerySection style={{marginLeft: '15%',
+                  marginRight: '10%'}}>
        
           
             {trueData.map(rich =>{

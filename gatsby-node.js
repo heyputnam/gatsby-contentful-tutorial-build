@@ -19,7 +19,7 @@ exports.createPages = ({graphql, actions: { createPage }}) =>{
         result.data.tutorial.edges.forEach(({node})=>{
             createPage({
                 path: `/tutorials/${node.slug}`,
-                component: path.resolve('./src/templates/tutorial.js'),
+                component: path.resolve('./src/templates/tutorialPage.js'),
                 context:{
                     slug: node.slug,
                 }

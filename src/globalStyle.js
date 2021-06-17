@@ -1,6 +1,6 @@
 import * as React from "react"
 import { createGlobalStyle } from "styled-components"
-
+import NavBar from './components/navBar'
 
 const GlobalStyle = createGlobalStyle`
 :root{
@@ -88,7 +88,7 @@ const Layout = ({children}) => {
     return(
         <>
       <GlobalStyle/>
-    
+    <NavBar/>
           {children}
   
         </>

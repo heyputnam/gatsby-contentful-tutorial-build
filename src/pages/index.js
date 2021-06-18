@@ -4,7 +4,7 @@ import Layout from '../globalStyle'
 import NavBar from '../components/navBar'
 import ReactRotatingText from 'react-rotating-text'
 
-
+import { useStaticQuery } from 'gatsby'
 const HomePage = styled.div`
 display: flex;
 height: 75vh;
@@ -23,11 +23,15 @@ color: black;
 
 const IndexPage = () => {
 
+  console.log()
   
   return (
-
+    
+    
     <Layout>
     <HomePage>
+
+
     
 <Title >
 

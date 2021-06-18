@@ -63,10 +63,14 @@ query MyQuery {
         sec.node.steps))
 
   const realSection = mapSection.map(s => {
-    return s
+    return (
+      s
+    )
   })
 
-  console.log(realSection)
+  const reOrder = realSection.reverse()
+
+  console.log(reOrder)
 
   const options = {
     renderNode: {

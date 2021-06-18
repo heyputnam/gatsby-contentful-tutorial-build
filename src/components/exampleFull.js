@@ -29,7 +29,7 @@ const FullpageWrapper = ({chidren, header}) => {
 
   const [section, setSection] = useState([
     useStaticQuery(graphql`
-query MyQuery {
+query fullQuery {
  
     allContentfulSteps {
       edges{

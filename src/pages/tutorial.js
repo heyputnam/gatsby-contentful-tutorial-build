@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+
 import * as React from "react"
 import styled from "styled-components"
 import StepDirections from '../components/exampleQuery'
@@ -33,11 +33,11 @@ p{
 const TutorialPage = ({children}) => {
   return (
   <Layout>
-    <NavBar />
+   
     
    <Title><h1>Tutorial Page</h1>
         <p>this is the good stuff!</p>
-        <p className="small">to check out a tutorial simply on the link!</p>
+       
     </Title>
     <Tutorial>
     <Container>

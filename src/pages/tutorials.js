@@ -44,14 +44,14 @@ margin-top: 3rem;
 const TutorialsPage = ({children}) => {
     return (
     <Layout>
-      <NavBar />
+
      <Title><h1>Everything you wanted to know!</h1>(and maybe things you didn't)
           <p className="small">to view a tutorial simply on the link!</p>
       </Title>
       <Container>
       <TutorialList>
         <ListItem>
-            <li><a href="/tutorial">contentful + gatsby 101</a></li>
+            <li><a href="/tutorials/gatsby-contentful101">contentful + gatsby 101</a></li>
         </ListItem>
       </TutorialList>
       </Container>

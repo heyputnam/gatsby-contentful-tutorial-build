@@ -1,16 +1,11 @@
-import { Link } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
 import Layout from '../globalStyle'
 import NavBar from '../components/navBar'
 import ReactRotatingText from 'react-rotating-text'
-import { Marker } from "react-mark.js";
-import { render } from "react-dom"
 
+import { useStaticQuery } from 'gatsby'
 const HomePage = styled.div`
-/* align-content: center;
-justify-content: center;
-text-align: center; */
 display: flex;
 height: 75vh;
 justify-content: center;
@@ -22,24 +17,30 @@ font-size: 9.5rem;
 text-align: center;
 color: black;
 
-
-
 `
 
 
 
-const IndexPage = ({children}) => {
+const IndexPage = () => {
 
+  console.log()
   
   return (
-
+    
+    
     <Layout>
-    <NavBar/>
     <HomePage>
+
+
     
 <Title >
 
-      <ReactRotatingText items={["welcome to all about the great gatsby.js"]} typingInterval={250} eraseMode={'erase'} deletingInterval={200 }pause={2500} />
+      <ReactRotatingText 
+      items={["welcome to all about the great gatsby.js"]} 
+      typingInterval={250} 
+      eraseMode={'erase'} 
+      deletingInterval={200 }
+      pause={2500} />
 
 </Title>
 

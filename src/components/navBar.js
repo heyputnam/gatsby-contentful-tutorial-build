@@ -33,10 +33,10 @@ const NavBar = () => {
         <>
         <Headers>
          <Logo>
-            <Title>low-budget Tutorials👏👏</Title>
+            <Title>low-budget Tutorials<span role="img">👏👏</span> </Title>
         </Logo>
           <Nav>
-            <a href="/tutorials">tutorials 🧠</a>
+            <a href="/tutorials">tutorials <span role="img">🧠</span></a>
             <a href="/">home</a>
         </Nav>
         </Headers>

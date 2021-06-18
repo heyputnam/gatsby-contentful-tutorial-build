@@ -5,7 +5,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import styled from 'styled-components'
 import NavBar from './exampleQuery'
 import Layout from '../globalStyle'
-import {useStaticQuery } from 'gatsby'
+import {useStaticQuery, graphql } from 'gatsby'
 import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, paraisoLight } from 'react-code-blocks'

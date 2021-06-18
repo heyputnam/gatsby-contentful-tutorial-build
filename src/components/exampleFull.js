@@ -14,6 +14,8 @@ justify-content: center;
 margin-top: -29em;
 height: 75vw;
 `
+
+
 const Example = styled.section`
 
 `
@@ -67,12 +69,15 @@ query MyQuery {
       sectionsColor={["tan"]}
       render={({ state, fullpageApi }) => {
         return (
-          <ReactFullpage.Wrapper>
-            <div className="section">
-            
+          <ReactFullpage.Wrapper >
+            <div className="section" style={{
+              display: "flex",
+              
+            }}>
               {realSection.map((t, idx) => {
                 return( 
               <div key={t} className="slide">
+        
                <h3>slide : {idx}</h3>
                <h1>name: {t.name}</h1>
                <img src={t.photoExample.fluid.src} height={400} width={400}></img>

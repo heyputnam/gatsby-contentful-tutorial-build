@@ -111,12 +111,15 @@ img{
     /* vertical-align: middle; */
     width: 90%;
     height: 100%;
+    
 }
 .fp-slidesContainer {
     /* float: left; */
     position: relative;
+    justify-content: center;
     
 }
+/* styles to set scrollbars on website  */
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -143,8 +146,6 @@ img{
 
 
 `
-
-
 
 
 const Layout = ({children}) => {

@@ -8,7 +8,7 @@ import Layout from '../globalStyle'
 import {useStaticQuery } from 'gatsby'
 import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import { CopyBlock, dracula } from 'react-code-blocks'
+import { CopyBlock, paraisoLight } from 'react-code-blocks'
 
 const Container = styled.section`
 display: flex;
@@ -81,16 +81,43 @@ query MyQuery {
       // code blocks formated
       console.log(node)
       return(
+        <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+          overflowX: 'auto',
+          paddingTop: '1.5rem',
+          paddingBottom: '1.5rem',
+        }}
+      >
         <CopyBlock
         language="javascript"
         text={node}
-        wrapLines={false}
+        wrapLines={true}
         codeBlock
-        codeContainerStyle={{textAlign: 'left', fontSize: '15px'}}
-        theme={dracula}
-        showLineNumbers={false}
+        
+        codeContainerStyle={{
+          // fontSize: '15px' ,
+          // fontSize: "0.6em",
+         
+        }}
+        customStyle={{
+        height: 'auto',
+        width: '55%',
+        overflowY: 'scroll',
+        margin: '0px 0.75rem',
+        borderRadius: '5px',
+        boxShadow: '6px 6px 6px rgba(0,0,0,0.35)',
+        fontSize: '0.75rem',}}
+        theme={paraisoLight}
+        showLineNumbers={true}
     
       />
+       
+       </div>
+      
          
       )
     }
@@ -107,7 +134,7 @@ query MyQuery {
           <ReactFullpage.Wrapper >
             <div className="section" style={{
               display: "flex",
-        
+              
               
               
               
@@ -120,40 +147,74 @@ query MyQuery {
    marginTop: "2em",
     height: "75vw",
     position: "flex",
+  
     }}>
-               <h3>slide : {idx}</h3>
-               <h1>name: {t.name}</h1>
+            <h1 style={{
+                 textAlign: 'center',
+         
+               }}> <button onClick={() => fullpageApi.moveTo(1, 0)} style={{
+               fontSize: '1rem',
+               margin: '1rem',
+               background: '#d9bae8',
+               color: 'black',
+               borderRadius: '65px',
+               width: '11em',
+               height: '3em',
+               cursor: 'pointer',
+               boxShadow: '8px 8px 8px rgba(0,0,0,0.35)',
+              
+             }}>go to the beginning</button> </h1>
+               <h1 style={{
+                 textAlign: 'center',
+                 fontSize: '4rem',
+                 color: "#663399",
+               }}>{t.name}</h1>
              
                <div className="directionContainer"
                style={{
-                height: "40vh",
+                height: "35vw",
                 overflow: "scroll",
+                display: "flex",
+                paddingTop: '3rem',
+               
                 
-              
-              
+                
                 
                }}>
+                 
+            
+         
                  <div className="directions" 
-                 style={{
                 
-                 }}>
-               <p>  {renderRichText(t.richDirections, options)}</p>
+                
+                >
+               <div style={{
+               }}>  {renderRichText(t.richDirections, options)}
+                  <div className="Container"
+                  style={{
+                   
+                    height: "auto",
+                    width: "50em",
+                    textAlign: "center",
+                    marginLeft:'21.4%',
+                    paddingTop: '3em',
+                  
+                  }}
+                  > 
+                  <h2 style={{
+                    marginBottom: "2rem",
+                    fontSize: '2rem',
+                    color: "#8a4baf",
+                  }}>Example</h2>
+                  <img src={t.photoExample.fluid.src} height={200} width={200}></img>
+                  </div>
+               </div>
                  </div>
+                
                </div>
      
-               <div className="imageContainer"
-                style={{ 
-                 width: "33vw", 
-                 display: "flex",
-                  justifyContent: "center", 
-                  marginTop: "3rem",
-                  marginBottom: "10px",
-                 
-                  
-                   }}>
-               <img src={t.photoExample.fluid.src} ></img>
-            </div>
-              <button onClick={() => fullpageApi.moveTo(1, 0)}>Move top</button> 
+           
+              
             
              </div>
             

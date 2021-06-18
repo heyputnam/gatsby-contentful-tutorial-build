@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import NavBar from './exampleQuery'
 import Layout from '../globalStyle'
 import {useStaticQuery } from 'gatsby'
+
 const Container = styled.section`
 display: flex;
 
@@ -54,13 +55,14 @@ query MyQuery {
         sec.node.steps))
 
   const realSection = mapSection.map(s => {
-    return s.name
+    return s
   })
 
   console.log(realSection)
   return (
    <>
    <Layout>
+   
     <ReactFullpage
       sectionsColor={["tan"]}
       render={({ state, fullpageApi }) => {
@@ -68,12 +70,13 @@ query MyQuery {
           <ReactFullpage.Wrapper>
             <div className="section">
             
-              {section.map(t => {
+              {realSection.map((t, idx) => {
                 return( 
               <div key={t} className="slide">
-                
-                  <h1>yo yo</h1>
-                  <h3>{t}</h3>
+               <h3>slide : {idx}</h3>
+               <h1>name: {t.name}</h1>
+               <img src={t.photoExample.fluid.src} height={400} width={400}></img>
+            
               <button onClick={() => fullpageApi.moveTo(1, 0)}>Move top</button> 
                 </div>
                 )})}
@@ -82,10 +85,13 @@ query MyQuery {
       )
       }}
     />
+  
     </Layout>
     </>
   )
 }
 
 
-export default FullpageWrapper
+
+
+export default FullpageWrapper;

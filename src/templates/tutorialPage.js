@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby' 
 import NavBar from '../components/navBar'
 import StepDirections from '../components/exampleQuery'
+import FullpageWrapper from '../components/exampleFull'
 
 const TutorialPage = styled.section`
 height: 75vw;
@@ -20,11 +21,11 @@ const Quote = styled.p`
 
 `
 const Top = styled.section`
-background: yellow;
+text-align: center;
 height: 3vw;
 `
 const Content = styled.section`
-background: blue;
+
 height: 100%;
 
 `
@@ -33,18 +34,18 @@ const Tutorial = ({data}) =>{
 return(
   
     <>
-    <Layout>
-       <NavBar/>
+ 
+       
        <TutorialPage>
-       <Top>
-      <Title>tutorial name: {data.contentfulLesson.name}</Title>
-      <Quote>are you ready to start learning? <span role="img">🧠 🧠</span></Quote>
-      </Top>
+     
       <Content>
-     <StepDirections/>
+         
+     <FullpageWrapper 
+     header="🧠  🧠  get ready to start learning 🧠  🧠 "
+     />
        </Content>
       </TutorialPage>
-    </Layout>
+   
     </>
 )
 }

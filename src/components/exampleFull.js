@@ -25,7 +25,7 @@ const Example = styled.section`
 const Text = styled.section`
 
 `
-const FullpageWrapper = ({chidren}) => {
+const FullpageWrapper = ({chidren, header}) => {
 
   const [section, setSection] = useState([
     useStaticQuery(graphql`
@@ -130,7 +130,10 @@ query MyQuery {
   return (
    <>
    <Layout>
-   
+  <h1 style={{
+    textAlign: 'center',
+    fontSize: '1.2rem',
+  }}> {header}</h1>
     <ReactFullpage
       sectionsColor={["white"]}
       render={({ state, fullpageApi }) => {
@@ -138,10 +141,6 @@ query MyQuery {
           <ReactFullpage.Wrapper >
             <div className="section" style={{
               display: "flex",
-              
-              
-              
-              
             }}>
               {realSection.map((t, idx) => {
                 return( 
@@ -151,11 +150,9 @@ query MyQuery {
    marginTop: "2em",
     height: "75vw",
     position: "flex",
-  
     }}>
             <h1 style={{
                  textAlign: 'center',
-         
                }}> <button onClick={() => fullpageApi.moveTo(1, 0)} style={{
                fontSize: '1rem',
                margin: '1rem',
@@ -166,8 +163,9 @@ query MyQuery {
                height: '3em',
                cursor: 'pointer',
                boxShadow: '8px 8px 8px rgba(0,0,0,0.35)',
-              
-             }}>go to the beginning</button> </h1>
+             }}>
+               go to the beginning</button>
+                </h1>
                <h1 style={{
                  textAlign: 'center',
                  fontSize: '4rem',
@@ -180,29 +178,18 @@ query MyQuery {
                 overflow: "scroll",
                 display: "flex",
                 paddingTop: '3rem',
-               
-                
-                
-                
                }}>
-                 
-            
-         
                  <div className="directions" 
-                
-                
                 >
                <div style={{
                }}>  {renderRichText(t.richDirections, options)}
                   <div className="Container"
                   style={{
-                   
                     height: "auto",
                     width: "50em",
                     textAlign: "center",
                     marginLeft:'21.4%',
                     paddingTop: '3em',
-                  
                   }}
                   > 
                   <h2 style={{
@@ -216,10 +203,6 @@ query MyQuery {
                  </div>
                 
                </div>
-     
-           
-              
-            
              </div>
             
               </div>

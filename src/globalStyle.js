@@ -81,12 +81,12 @@ img{
     left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #000 transparent transparent;
+    border-color: transparent #D3A9EC transparent transparent;
 }
 .fp-controlArrow.fp-next {
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #000;
+    border-color: transparent transparent transparent #D3A9EC;
 }
 .fp-slide, .fp-slidesContainer {
     height: 50%;

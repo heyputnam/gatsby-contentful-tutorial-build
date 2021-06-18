@@ -68,8 +68,6 @@ margin-left: 5rem;
 align-self: center;
 
 `
-
-
 const StepDirections = ({title, fullpageProps}) => {
 const stepQuery = useStaticQuery(graphql`
 query MyQuery {
@@ -155,11 +153,7 @@ query MyQuery {
 //         }
 //       }
 
-    return(
-      
-      
-
-          
+    return(    
       <QuerySection>
      
             {trueData.map(rich =>{

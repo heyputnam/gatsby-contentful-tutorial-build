@@ -51,7 +51,7 @@ const TutorialsPage = ({children}) => {
       <Container>
       <TutorialList>
         <ListItem>
-            <li><a href="/tutorial">contentful + gatsby 101</a></li>
+            <li><a href="/tutorials/gatsby-contentful101">contentful + gatsby 101</a></li>
         </ListItem>
       </TutorialList>
       </Container>

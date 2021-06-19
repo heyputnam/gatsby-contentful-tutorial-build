@@ -151,9 +151,9 @@ img{
 const Layout = ({children}) => {
     return(
         <>
-      <GlobalStyle/>
+    <GlobalStyle/>
     <NavBar/>
-          {children}
+         <div>{children}</div> 
   
         </>
     )

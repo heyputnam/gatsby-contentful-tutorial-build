@@ -32,9 +32,9 @@ p{
 `
 const TutorialPage = ({children}) => {
   return (
-  <Layout>
+ 
    
-    
+    <>
    <Title><h1>Tutorial Page</h1>
         <p>this is the good stuff!</p>
        
@@ -44,7 +44,7 @@ const TutorialPage = ({children}) => {
       <StepDirections title={"contentful + gatsby 101"}></StepDirections>
      </Container>
     </Tutorial>
-  </Layout>
+</>
   )
 }
 

@@ -129,7 +129,7 @@ query fullQuery {
   }
   return (
    <>
-   <Layout>
+   
   <h1 style={{
     textAlign: 'center',
     fontSize: '1.2rem',
@@ -214,7 +214,7 @@ query fullQuery {
       }}
     />
   
-    </Layout>
+   
     </>
   )
 }

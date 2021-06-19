@@ -1,10 +1,13 @@
-import React from 'react'
-import Layout from "./src/globalStyle"
+const React = require("react")
+const { Provider } = require("react-redux")
 
-exports.wrapPageElement = ({ element, props }) => {
-  // props provide same data to Layout as Page element will get
-  // including location, data, etc - you don't need to pass it
-  return <Layout {...props}>{element}</Layout>
+const createStore = require("./src/state/createStore")
+const store = createStore()
+
+exports.wrapRootElement = ({ element }) => {
+  return (
+    <Provider store={store}>
+      {element}
+    </Provider>
+  )
 }
-
-

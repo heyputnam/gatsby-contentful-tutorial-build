@@ -182,11 +182,14 @@ query fullQuery {
       sectionsColor={["white"]}
       render={({ state, fullpageApi }) => {
         return (
-          <FullPageStyle>
+      
           <ReactFullpage.Wrapper >
+            <FullPageStyle>
             <div className="section" style={{
               display: "flex",
             }}>
+               <div class="fp-controlArrow fp-next"></div>
+      <div class="fp-controlArrow fp-prev"></div>
               {realSection.map((t, idx) => {
                 return( 
               <div key={t} className="slide" >
@@ -196,6 +199,7 @@ query fullQuery {
     height: "75vw",
     position: "flex",
     }}>
+     
             <h1 style={{
                  textAlign: 'center',
                }}> <button onClick={() => fullpageApi.moveTo(1, 0)} style={{
@@ -253,9 +257,9 @@ query fullQuery {
               </div>
               )})}
             </div>
-            
+            </FullPageStyle>
           </ReactFullpage.Wrapper>
-          </FullPageStyle>
+        
       )
       }}
   

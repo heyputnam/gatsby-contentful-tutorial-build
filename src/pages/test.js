@@ -7,7 +7,7 @@ const Test = () =>{
   
     return (
         <>
-<Layout/>
+
 
   </>
     );

@@ -5,6 +5,7 @@ module.exports = {
   plugins: ["gatsby-plugin-gatsby-cloud",
       `gatsby-plugin-styled-components`,
       `gatsby-plugin-react-helmet`,
+      `babel-plugin-styled-components`,
   {
     resolve: `gatsby-source-contentful`,
     options: {

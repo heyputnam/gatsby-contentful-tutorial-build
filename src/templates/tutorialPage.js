@@ -34,7 +34,7 @@ const Tutorial = ({data}) =>{
 return(
   
     <>
- 
+   <Layout>
        
        <TutorialPage>
      
@@ -45,7 +45,7 @@ return(
      />
        </Content>
       </TutorialPage>
-   
+      </Layout>
     </>
 )
 }

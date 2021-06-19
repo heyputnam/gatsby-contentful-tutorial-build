@@ -45,6 +45,7 @@ const TutorialsPage = ({children}) => {
     return (
     
 <>
+<Layout>
      <Title><h1>Everything you wanted to know!</h1>(and maybe things you didn't)
           <p className="small">to view a tutorial simply on the link!</p>
       </Title>
@@ -55,6 +56,7 @@ const TutorialsPage = ({children}) => {
         </ListItem>
       </TutorialList>
       </Container>
+      </Layout>
  </>
     )
   }

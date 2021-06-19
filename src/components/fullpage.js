@@ -1,3 +1,7 @@
+import * as React from "react"
+import { createGlobalStyle } from "styled-components"
+
+const FullPageStyles = createGlobalStyle`
 .fp-controlArrow.fp-prev {
     left: 15px;
     width: 0;
@@ -40,3 +44,14 @@
     justify-content: center;
     
 }
+`
+const FullPageStyle = ({children}) => {
+    return(
+        <>
+    <FullPageStyles/>
+    {children}
+    </>
+    )
+}
+
+export default FullPageStyle;

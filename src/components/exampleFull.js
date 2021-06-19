@@ -9,7 +9,7 @@ import {useStaticQuery, graphql } from 'gatsby'
 import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, paraisoLight } from 'react-code-blocks'
-import '../components/fullpage.css'
+import FullPageStyle from '../components/fullpage'
 const Container = styled.section`
 display: flex;
 
@@ -182,6 +182,7 @@ query fullQuery {
       sectionsColor={["white"]}
       render={({ state, fullpageApi }) => {
         return (
+          <FullPageStyle>
           <ReactFullpage.Wrapper >
             <div className="section" style={{
               display: "flex",
@@ -254,6 +255,7 @@ query fullQuery {
             </div>
             
           </ReactFullpage.Wrapper>
+          </FullPageStyle>
       )
       }}
   

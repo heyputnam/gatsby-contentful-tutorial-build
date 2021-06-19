@@ -9,7 +9,7 @@ import {useStaticQuery, graphql } from 'gatsby'
 import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, paraisoLight } from 'react-code-blocks'
-
+import FullPageStyle from '../components/fullpage'
 const Container = styled.section`
 display: flex;
 
@@ -17,7 +17,51 @@ justify-content: center;
 margin-top: -29em;
 height: 75vw;
 `
+const ReactFullpage1 = styled(ReactFullpage)`
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #D3A9EC transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #D3A9EC;
+}
+.fp-slide, .fp-slidesContainer {
+    height: 50%;
+    display: flex;
+  
+}
+.fp-slides {
+    z-index:1;
+   
+    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+    transition: all 0.3s ease-out;
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: flex;
+    flex-direction: column;
 
+    width: 100%;
+}
+.fp-tableCell {
+    display: flex;
+    flex-direction: column;
+    /* vertical-align: middle; */
+    width: 90%;
+    height: 100%;
+    
+}
+.fp-slidesContainer {
+    /* float: left; */
+    position: relative;
+    justify-content: center;
+    
+}
+
+`
 
 const Example = styled.section`
 
@@ -134,10 +178,11 @@ query fullQuery {
     textAlign: 'center',
     fontSize: '1.2rem',
   }}> {header}</h1>
-    <ReactFullpage
+    <ReactFullpage1
       sectionsColor={["white"]}
       render={({ state, fullpageApi }) => {
         return (
+          <FullPageStyle>
           <ReactFullpage.Wrapper >
             <div className="section" style={{
               display: "flex",
@@ -210,6 +255,7 @@ query fullQuery {
             </div>
             
           </ReactFullpage.Wrapper>
+          </FullPageStyle>
       )
       }}
   

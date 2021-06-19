@@ -7,9 +7,7 @@ const Test = () =>{
   
     return (
         <>
-  <Layout>
-    
-  </Layout>
+
 
   </>
     );

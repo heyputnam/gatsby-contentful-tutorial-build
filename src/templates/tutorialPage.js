@@ -34,8 +34,8 @@ const Tutorial = ({data}) =>{
 return(
   
     <>
-   <Layout>
-       
+
+       <Layout>
        <TutorialPage>
      
       <Content>

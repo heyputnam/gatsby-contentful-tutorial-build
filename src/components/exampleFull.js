@@ -9,7 +9,7 @@ import {useStaticQuery, graphql } from 'gatsby'
 import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, paraisoLight } from 'react-code-blocks'
-import FullPageStyle from '../components/fullpage'
+
 const Container = styled.section`
 display: flex;
 
@@ -173,7 +173,7 @@ query fullQuery {
   }
   return (
    <>
-   <Layout>
+   
   <h1 style={{
     textAlign: 'center',
     fontSize: '1.2rem',
@@ -184,12 +184,11 @@ query fullQuery {
         return (
       
           <ReactFullpage.Wrapper >
-            <FullPageStyle>
+    
             <div className="section" style={{
               display: "flex",
             }}>
-               <div class="fp-controlArrow fp-next"></div>
-      <div class="fp-controlArrow fp-prev"></div>
+       
               {realSection.map((t, idx) => {
                 return( 
               <div key={t} className="slide" >
@@ -257,7 +256,7 @@ query fullQuery {
               </div>
               )})}
             </div>
-            </FullPageStyle>
+         
           </ReactFullpage.Wrapper>
         
       )
@@ -265,7 +264,7 @@ query fullQuery {
   
     />
   
-  </Layout>
+
     </>
   )
 }

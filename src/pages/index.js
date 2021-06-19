@@ -29,7 +29,7 @@ const IndexPage = () => {
     
     
    <>
-   <Layout>
+
     <HomePage>
 
 
@@ -46,7 +46,7 @@ const IndexPage = () => {
 </Title>
 
      </HomePage>
-     </Layout>
+
     </>
   )
 }

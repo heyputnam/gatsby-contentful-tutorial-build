@@ -3,7 +3,6 @@ module.exports = {
     title: "contentful-gatsby",
   },
   plugins: ["gatsby-plugin-gatsby-cloud",
-      `gatsby-plugin-styled-components`,
       `gatsby-plugin-react-helmet`,
       `babel-plugin-styled-components`,
   {
@@ -22,5 +21,9 @@ module.exports = {
       },
     },
   },
+  `gatsby-plugin-styled-components`,
+
+  `gatsby-plugin-split-css`,
+
 ],
 };

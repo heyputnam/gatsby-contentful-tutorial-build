@@ -5,9 +5,6 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, dracula } from 'react-code-blocks'
-import FullpageWrapper from './exampleFull'
-import ReactFullpage from "@fullpage/react-fullpage";
-
 
 const fullpageOptions = {
   anchors: ['page'],
@@ -17,13 +14,9 @@ const fullpageOptions = {
 const QuerySection = styled.div`
 display: flex;
 flex-direction: column-reverse;
-
-
-
 `
 const StepContainer = styled.div`
 display: flex;
-
 width: 100%;
 height: 60vw;
 
@@ -34,8 +27,6 @@ height: 100%;
 padding: 2rem;
 flex-direction: column;
 margin: 2em;
-
-
 `
 const Title = styled.p`
 letter-spacing: 4px;
@@ -56,9 +47,6 @@ const DirectionContainer = styled.div`
 /* width: 40rem;
 height: 20rem;
 overflow: scroll; */
-
-
-
 `
 const Example = styled.div`
 margin-top: 2rem;
@@ -100,7 +88,6 @@ query MyQuery {
       [INLINES.HYPERLINK]: (node, children) => {
         return <a href={`${node.data.uri}`}  key={children}>{(children)}</a>;
       }
-     
     },
     renderMark: {
     [MARKS.CODE]: (node)=>{
@@ -121,16 +108,7 @@ query MyQuery {
       )
     }
   }
-  }
-
-  // mapping query's can probably go back and clean this up
-  // const rawQuery = stepQuery.allContentfulSteps.edges.map( query => {
-  //   return(
-  //     query.node.steps.richDirections,
-  //     console.log( query.node.steps.richDirections.raw)
-    
-  //   )
-  // } )
+}
  
   const stepData = stepQuery.allContentfulSteps.edges.map(d => {
   return(d.node.steps)
@@ -140,18 +118,6 @@ query MyQuery {
     data
   )
 })
-// console.log(rawData.raw)
-// const FullpageWrapper = fullpageProps => (
-//   <ReactFullpage
-//     {...fullpageOptions}
-//     render={({ state, fullpageApi }) => {
-//       console.log('render prop change', state) // eslint-disable-line no-console
-
-//       if (state.callback === 'onLeave') {
-//         if (state.direction === 'down') {
-//           console.log('going down...' + state.origin.index)
-//         }
-//       }
 
     return(    
       <QuerySection>
@@ -165,9 +131,6 @@ query MyQuery {
               <StepContainer >
            
               <div key={rich.name} id={rich.name}>
-       
-      
-           
               
         <Step>
             
@@ -197,16 +160,8 @@ query MyQuery {
   
      
   </QuerySection>
-    
-
-       
-      
-
-                   
-  )       }
-
-
-        
+   ) 
+  }
 
 export default StepDirections;
 

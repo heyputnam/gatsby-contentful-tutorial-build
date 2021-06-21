@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
 import Layout from '../globalStyle'
-import NavBar from '../components/navBar'
+
 
 const TutorialList = styled.div`
 display: flex;

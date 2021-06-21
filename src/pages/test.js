@@ -1,14 +1,16 @@
-/* eslint-disable import/no-extraneous-dependencies */
+// a page to test a new components/ options
 import React from "react";
 import Layout from '../globalStyle'
 
-const Test = () =>{
 
+
+
+const Test = ({children}) =>{
+ 
   
     return (
         <>
-
-
+<Layout/>
   </>
     );
   }

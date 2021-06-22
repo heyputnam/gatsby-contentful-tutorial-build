@@ -39,7 +39,7 @@ const Logo = styled.div``
 const Title = styled.h1`
 letter-spacing: 5px;
 font-size: 1.7rem;
-color: #6D9BFE;
+color: #3347C8;
 
 `
 
@@ -103,7 +103,7 @@ const NavBar = () => {
         <>
         <Headers>
          <Logo>
-            <Title>oh fck<span role="img">👏👏</span> </Title>
+            <Title>ohfck tutorials<span role="img">👏👏</span> </Title>
         </Logo>
           <Nav>
 <DropDown>
@@ -111,9 +111,9 @@ const NavBar = () => {
          
             <div className="dropdown-content" >
             <a href="/gatsby">gatsby</a>
-            <a href="#">JS</a>
-            <a href="#">CSS</a>
-            <a href="#">react</a>
+            <a href="/underconstruction">JS</a>
+            <a href="/underconstruction">CSS</a>
+            <a href="/underconstruction">react</a>
             </div>
         </DropDown>
             <a className="home" href="/">home</a>

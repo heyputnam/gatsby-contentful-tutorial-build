@@ -21,12 +21,13 @@ margin-top: 2rem;
 a{
 
     text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
+    color: black;
+    font-size: 1.7rem;
 }
 
 a:hover{
     font-size: 2.3rem;
+    margin-left: -2rem;
 }
 
 `
@@ -35,9 +36,16 @@ font-size: 2rem;
 text-align: center;
 
 img{
+    position: fixed;
     height: 5rem;
     width: 5.5rem;
     margin-left: 2rem;
+}
+img:hover{
+    margin-left: 1.5rem;
+    margin-top: -0.8rem;
+    height: 6.5rem;
+    width: 7rem;
 }
 
 mark{
@@ -51,14 +59,15 @@ p{
 }
 
 .small {
+    margin-top: 0.5rem;
   font-size: 1.3rem;
 }
 `
 
 const Container = styled.div`
-margin-top: 3rem;
-background-color: black;
-height: 38vw;
+/* margin-top: 3rem; */
+
+height: 41vw;
 `
 
 

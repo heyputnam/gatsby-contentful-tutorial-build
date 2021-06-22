@@ -37,7 +37,7 @@ const IndexPage = () => {
 <Title >
 
       <ReactRotatingText 
-      items={["welcome to all about the great gatsby.js"]} 
+      items={["welcome to oh fck tutorials."]} 
       typingInterval={250} 
       eraseMode={'erase'} 
       deletingInterval={200 }

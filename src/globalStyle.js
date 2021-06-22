@@ -59,6 +59,8 @@ img{
     width: 100%;
     height: auto; 
 }
+
+
 `
 
 
@@ -66,7 +68,7 @@ const Layout = ({children}) => {
     return(
         <>
     <GlobalStyle/>
-    <NavBar/>
+<NavBar/>
          <div>{children}</div> 
   
         </>

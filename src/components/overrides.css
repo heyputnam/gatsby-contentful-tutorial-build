@@ -71,12 +71,15 @@ html.fp-enabled,
     left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #D3A9EC transparent transparent !important;
+    border-color: transparent #C2C4C3
+    transparent transparent !important;
+    /* border-color: transparent #D3A9EC transparent transparent !important; */
 }
 .fp-controlArrow.fp-next {
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #D3A9EC !important;
+    border-color: transparent transparent transparent #C2C4C3
+    !important;
 }
 .fp-scrollable {
     overflow: hidden;
@@ -250,11 +253,12 @@ html.fp-enabled,
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
+    /* -webkit-border-radius: 10px;
     border-radius: 10px;
     background: #d9bae8; 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+    display: none;
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: #f1defa; 
+    /* background: #f1defa;  */
 }

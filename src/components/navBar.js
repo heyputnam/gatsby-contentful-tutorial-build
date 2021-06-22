@@ -58,6 +58,7 @@ button{
   a{
     margin-top: 1.4rem;
     color: white;
+    
     display: inline-block;
     /* width: 75%; */
     cursor: pointer;
@@ -72,7 +73,6 @@ flex-direction: column;
 position: absolute;
 
 a{
-
  display: none;
 }
 
@@ -109,7 +109,7 @@ const NavBar = () => {
           <button>the tutorials.</button>
          
             <div className="dropdown-content" >
-            <a href="/tutorials">gatsby</a>
+            <a href="/gatsby">gatsby</a>
             <a href="#">JS</a>
             <a href="#">CSS</a>
             <a href="#">react</a>

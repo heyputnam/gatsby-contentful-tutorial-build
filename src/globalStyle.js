@@ -1,7 +1,7 @@
 import * as React from "react"
 import { createGlobalStyle } from "styled-components"
 import NavBar from './components/navBar'
-
+import Footer from './components/footer'
 const GlobalStyle = createGlobalStyle`
 *,*::before,*::after{
     margin: 0;
@@ -70,7 +70,7 @@ const Layout = ({children}) => {
     <GlobalStyle/>
 <NavBar/>
          <div>{children}</div> 
-  
+  <Footer/>
         </>
     )
 }

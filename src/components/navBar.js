@@ -6,6 +6,9 @@ display: flex;
 justify-content: space-between;
 font-size: 1rem;
 margin: 1rem;
+margin-bottom: 0.1rem;
+
+
 
 `
 
@@ -16,11 +19,18 @@ font-size: 1.7rem;
 a{
     color: black;
     cursor: pointer;
+   
+}
+.home{
+  background: #F2B790;
+  width: 7rem;
+  padding-left: 1.2rem;
+  margin-bottom: 0.4rem
 }
 
 a:not(:last-child){
   margin-right: 3rem;
-
+  
 }
 
 `
@@ -46,9 +56,10 @@ button{
 
 &:hover .dropdown-content{
   a{
-    color: black;
+    margin-top: 1.4rem;
+    color: white;
     display: inline-block;
-    width: 75%;
+    /* width: 75%; */
     cursor: pointer;
   }
 
@@ -68,11 +79,15 @@ a{
 
 
 a:hover{
-background: yellow;
+background: #F6FE87;
 color: black;
 margin-top: 0.6rem;
 margin-bottom: 0.6rem;
-padding-left: 1.5rem;
+padding-left: 1rem;
+
+font-size: 2.5rem;
+width: 90%;
+
 
 
 }
@@ -91,7 +106,7 @@ const NavBar = () => {
         </Logo>
           <Nav>
 <DropDown>
-          <button>tutorials<span role="img">🧠</span></button>
+          <button>the tutorials.</button>
          
             <div className="dropdown-content" >
             <a href="/tutorials">gatsby</a>
@@ -100,7 +115,7 @@ const NavBar = () => {
             <a href="#">react</a>
             </div>
         </DropDown>
-            <a href="/">home</a>
+            <a className="home" href="/">home</a>
         </Nav>
         </Headers>
         </>

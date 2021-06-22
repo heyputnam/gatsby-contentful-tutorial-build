@@ -2,9 +2,7 @@ import * as React from 'react'
 import Layout from '../globalStyle'
 import styled from 'styled-components'
 import { graphql } from 'gatsby' 
-import NavBar from '../components/navBar'
-import StepDirections from '../components/exampleQuery'
-import FullpageWrapper from '../components/exampleFull'
+import Steps from '../components/exampleFull'
 
 const TutorialPage = styled.section`
 height: 75vw;
@@ -39,8 +37,8 @@ return(
        <TutorialPage>
      
       <Content>
-         
-     <FullpageWrapper 
+     
+     <Steps 
      header="🧠  🧠  get ready to start learning 🧠  🧠 "
      />
        </Content>

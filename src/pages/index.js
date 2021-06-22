@@ -3,28 +3,34 @@ import styled from "styled-components"
 import Layout from '../globalStyle'
 import NavBar from '../components/navBar'
 import ReactRotatingText from 'react-rotating-text'
-
+import photo from '../images/icon.png'
 import { useStaticQuery } from 'gatsby'
 const HomePage = styled.div`
 display: flex;
-height: 75vh;
+height: 90vh;
 justify-content: center;
-margin-top: 3rem;
+/* margin-top: 3rem; */
+background-color: black;
 `
 const Title = styled.h1`
-margin-top: 3rem;
+margin-top: 10rem;
+margin-left: 2rem;
+margin-right: 2rem;
 font-size: 9.5rem;
 text-align: center;
-color: black;
+color: white;
 
 `
 
 
 
-const IndexPage = () => {
+const IndexPage = ({word}) => {
 
   console.log()
+  word = "word"
   
+
+
   return (
     
     
@@ -37,7 +43,7 @@ const IndexPage = () => {
 <Title >
 
       <ReactRotatingText 
-      items={["welcome to all about the great gatsby.js"]} 
+      items={["welcome to oh fck tutorials."]} 
       typingInterval={250} 
       eraseMode={'erase'} 
       deletingInterval={200 }

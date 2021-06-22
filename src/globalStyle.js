@@ -1,7 +1,7 @@
 import * as React from "react"
 import { createGlobalStyle } from "styled-components"
 import NavBar from './components/navBar'
-
+import Footer from './components/footer'
 const GlobalStyle = createGlobalStyle`
 *,*::before,*::after{
     margin: 0;
@@ -59,6 +59,8 @@ img{
     width: 100%;
     height: auto; 
 }
+
+
 `
 
 
@@ -66,9 +68,9 @@ const Layout = ({children}) => {
     return(
         <>
     <GlobalStyle/>
-    <NavBar/>
+<NavBar/>
          <div>{children}</div> 
-  
+  <Footer/>
         </>
     )
 }

@@ -7,7 +7,7 @@ import {useStaticQuery, graphql } from 'gatsby'
 import { MARKS, INLINES} from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { CopyBlock, paraisoLight } from 'react-code-blocks'
-
+// changes default styling for scroll bar and fullpage.js
 import './overrides.css'
 const Container = styled.section`
 display: flex;
@@ -16,7 +16,7 @@ justify-content: center;
 margin-top: -29em;
 height: 75vw;
 `
-const FullpageWrapper = ({chidren, header}) => {
+const Steps = ({chidren, header}) => {
 
   const [section, setSection] = useState([
     useStaticQuery(graphql`
@@ -127,6 +127,7 @@ query fullQuery {
    
             <div className="section" style={{
               display: "flex",
+              position: "relative",
             }}>
     
               {realSection.map((t, idx) => {
@@ -218,4 +219,4 @@ query fullQuery {
 
 
 
-export default FullpageWrapper;
+export default Steps;

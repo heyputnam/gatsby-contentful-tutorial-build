@@ -39,6 +39,7 @@ const Logo = styled.div``
 const Title = styled.h1`
 letter-spacing: 5px;
 font-size: 1.7rem;
+color: #6D9BFE;
 
 `
 
@@ -57,7 +58,7 @@ button{
 &:hover .dropdown-content{
   a{
     margin-top: 1.4rem;
-    color: white;
+    color: #6D9BFE;
     
     display: inline-block;
     /* width: 75%; */

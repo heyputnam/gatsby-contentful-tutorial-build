@@ -13,11 +13,17 @@ mark{
 }
 `
 
+
+
 const ListItem = styled.ul`
 justify-content: center;
 /* align-items: center; */
 list-style-type: none;
 margin-top: 2rem;
+
+
+
+
 a{
 
     text-decoration: none;
@@ -28,6 +34,54 @@ a{
 a:hover{
     font-size: 2.3rem;
     margin-left: -2rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tags{
+    display: flex;
+
+  flex-direction: row;
+  
+}
+
+`
+
+const Tag = styled.div`
+
+height: 2rem;
+width: 7rem;
+background: #FE9BF4;
+margin-top: 0.6rem;
+margin-right: 0.5rem;
+padding-top: 0.3rem;
+box-shadow: 6px 6px 6px ;
+font-size: 0.7rem;
+display: flex;
+cursor: pointer;
+padding-left: 0.7rem;
+
+&:hover{
+    background: #F955E8;
+    /* margin-left: 1rem; */
+    margin-right: 1rem;
+
+    &:not(:first-child){
+        margin-left: 0.6rem;
+    }
+    
+}
+
+span{
+    display: absolute;
+    right: 0;
+    margin-top: -0.8rem;
+    margin-left: 1.3rem;
+    /* padding-right: 0.2rem; */
+    font-size: 1.5rem;
 }
 
 `
@@ -87,7 +141,14 @@ const TutorialsPage = ({children}) => {
       <Container>
       <TutorialList>
         <ListItem>
+            <div className="container">
             <li><a href="/tutorials/gatsby-contentful101">contentful + <mark>gatsby</mark> 101</a></li>
+            <div className="tags">
+            <Tag>graphql <span>.</span></Tag> 
+            <Tag>content model <span>.</span></Tag> 
+            <Tag>dynamic data <span>.</span></Tag> 
+            </div>
+            </div>
         </ListItem>
       </TutorialList>
       </Container>

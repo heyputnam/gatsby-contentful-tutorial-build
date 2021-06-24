@@ -1,15 +1,15 @@
 // a page to test a new components/ options
 import React from "react";
-import Layout from '../globalStyle'
-import { useState, useEffect } from 'react'
-import { useStaticQuery, graphql} from 'gatsby'
-import { MARKS, INLINES} from '@contentful/rich-text-types'
-import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import { CopyBlock, paraisoLight } from 'react-code-blocks'
-import styled from 'styled-components'
+import Layout from '../globalStyle';
+import { useState, useEffect } from 'react';
+import { useStaticQuery, graphql} from 'gatsby';
+import { MARKS, INLINES} from '@contentful/rich-text-types';
+import { renderRichText } from 'gatsby-source-contentful/rich-text';
+import { CopyBlock, paraisoLight } from 'react-code-blocks';
+import styled from 'styled-components';
 import ScrollToTop from "../components/scrollToTop";
 
-
+import Popup from '../components/popup'
 
 
 const Title = styled.h1`
@@ -33,6 +33,42 @@ height: 75vw;
 const DirectionContainer = styled.div`
 margin-top: 11rem;
 padding-bottom: 4rem;
+.box{
+  display: flex;
+  width: 35%;
+  height: auto;
+
+
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: hidden;
+
+}
+.popup-box {
+  position: absolute;
+  width: 100%;
+  height: 20rem;
+  justify-content: center;
+
+
+}
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  display: flex;
+  right: calc(15% - 30px);
+  top: calc(100vh - 85vh - 33px);
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
 
 `
 const Top = styled.div`
@@ -184,6 +220,12 @@ return (
     }
   }
   }
+  const [isOpen, setIsOpen] = useState(false);
+ 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+ 
 
     return (
 <>
@@ -202,14 +244,17 @@ return (
   {stepContent.map(step=>{
     return(
       <>
+  
   <Name>
       <mark>{step.name}</mark>
   </Name>
   <Step>
 <ImageContainer>
+
     <img src={step.photoExample.fluid.src}height="400" width="400"></img>
     </ImageContainer>
     <Words>
+  <Popup/>
     {renderRichText(step.richDirections, options)}
   </Words>
   </Step>

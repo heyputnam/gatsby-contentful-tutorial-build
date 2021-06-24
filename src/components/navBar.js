@@ -4,10 +4,17 @@ import styled from 'styled-components'
 const Headers = styled.header`
 display: flex;
 justify-content: space-between;
+height: 3rem;
 font-size: 1rem;
-margin: 1rem;
-margin-bottom: 0.1rem;
-
+padding-top: 0.5rem;
+/* margin: 1rem; */
+/* margin-bottom: 0.1rem; */
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+background: white;
+z-index: 1;
 
 
 `
@@ -25,6 +32,8 @@ a{
   background: #F2B790;
   width: 7rem;
   padding-left: 1.2rem;
+  margin-right: 0.5rem;
+  padding-bottom: 0.2rem;
   margin-bottom: 0.4rem
 }
 
@@ -40,7 +49,7 @@ const Title = styled.h1`
 letter-spacing: 5px;
 font-size: 1.7rem;
 color: #3347C8;
-
+margin-left: 0.5rem;
 `
 
 const DropDown = styled.div`

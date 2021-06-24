@@ -240,7 +240,8 @@ html.fp-enabled,
 /* override standard default webscroll bar styles  */
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 0px;
+
 }
 
 /* Track */

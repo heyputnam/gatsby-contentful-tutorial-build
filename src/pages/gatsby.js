@@ -8,6 +8,8 @@ display: flex;
 /* justify-content: center; */
 /* align-items: center; */
 margin-left: 5rem;
+flex-direction: column;
+margin-top: 2rem;
 mark{
     background: #b491c8;
 }
@@ -22,6 +24,10 @@ list-style-type: none;
 margin-top: 2rem;
 
 
+.description {
+width: 30rem;
+margin-top: 1rem;
+}
 
 
 a{
@@ -31,13 +37,20 @@ a{
     font-size: 1.7rem;
 }
 
+
+
 a:hover{
     font-size: 2.3rem;
     margin-left: -2rem;
+
+   
 }
+
+
 .container{
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
     
 }
 
@@ -57,7 +70,7 @@ width: 7rem;
 background: #FE9BF4;
 margin-top: 0.6rem;
 margin-right: 0.5rem;
-padding-top: 0.3rem;
+padding-top: 0.6rem;
 box-shadow: 6px 6px 6px ;
 font-size: 0.7rem;
 display: flex;
@@ -86,6 +99,7 @@ span{
 
 `
 const Title = styled.div`
+margin-top: 4.5rem;
 font-size: 2rem;
 text-align: center;
 
@@ -125,6 +139,7 @@ height: 41vw;
 `
 
 
+
 const TutorialsPage = ({children}) => {
     return (
     
@@ -143,10 +158,25 @@ const TutorialsPage = ({children}) => {
         <ListItem>
             <div className="container">
             <li><a href="/tutorials/gatsby-contentful101">contentful + <mark>gatsby</mark> 101</a></li>
+            <div className="description">
+                <p>learn the basics of contentful with gatsby.js, using staticQueries, contentModels, and learning graphql</p>
+            </div>
             <div className="tags">
-            <Tag>graphql <span>.</span></Tag> 
-            <Tag>content model <span>.</span></Tag> 
-            <Tag>dynamic data <span>.</span></Tag> 
+            <Tag>#graphql</Tag> 
+            <Tag>#contentmodel</Tag> 
+            <Tag>#dynamicdata</Tag> 
+            <Tag>#staticquery</Tag> 
+            </div>
+            </div>
+        </ListItem>
+        <ListItem>
+            <div className="container">
+            <li><a href="/404"><mark>fake</mark> list item</a></li>
+            <div className="tags">
+            <Tag>#fake</Tag> 
+            <Tag>#fake</Tag> 
+            <Tag>#fake</Tag> 
+            <Tag>#fake</Tag> 
             </div>
             </div>
         </ListItem>

@@ -37,6 +37,11 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin-top: 0.5rem;
+/* cursor: url("https://i.ibb.co/CvNsXRV/finger.png" ), auto; */
+
+a{
+    cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
+}
 a:not(:last-child){
 margin-right: 3rem;
 

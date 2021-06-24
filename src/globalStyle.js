@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: false;
+    cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
 
 }
 

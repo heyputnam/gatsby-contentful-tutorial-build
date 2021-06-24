@@ -42,7 +42,7 @@ a{
 a:hover{
     font-size: 2.3rem;
     margin-left: -2rem;
-
+    cursor: url("https://i.ibb.co/fStr5rr/index-finger.png"),  auto;
    
 }
 
@@ -74,7 +74,7 @@ padding-top: 0.6rem;
 box-shadow: 6px 6px 6px ;
 font-size: 0.7rem;
 display: flex;
-cursor: pointer;
+
 padding-left: 0.7rem;
 
 &:hover{
@@ -157,7 +157,7 @@ const TutorialsPage = ({children}) => {
       <TutorialList>
         <ListItem>
             <div className="container">
-            <li><a href="/tutorials/gatsby-contentful101">contentful + <mark>gatsby</mark> 101</a></li>
+            <li><a href="/test">contentful + <mark>gatsby</mark> 101</a></li>
             <div className="description">
                 <p>learn the basics of contentful with gatsby.js, using staticQueries, contentModels, and learning graphql</p>
             </div>

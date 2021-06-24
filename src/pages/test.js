@@ -78,7 +78,7 @@ width:  100%;
 position: fixed;
 top: 0;
 margin-top: 2.5rem;
-
+z-index: 1;
 left: 0;
 right: 0;
 text-align: center;

@@ -6,40 +6,48 @@ const Open = styled.button`
 
 `
 const PopUp = styled.div`
+/* display: flex; */
     position: absolute;
-    width: 100%;
-    height: 20rem;
+    width: auto;
+    height: auto;
     justify-content: center;
-  
+    z-index: 2;
+    margin-left: -4rem;
+    
+    
 `
 const Box = styled.div`
  display: flex;
-    width: 35%;
-    height: auto;
-  
-  
-    background: #fff;
-    border-radius: 4px;
-    padding: 20px;
-    border: 1px solid #999;
+ position: fixed;
+ top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 5, 5, 0.85);
+    padding: 27px;
     overflow: hidden;
+    img {
+        padding: 1rem;
+    }
 
 `
-const Close = styled.button`
+const Close = styled.div`
+display: flex;
+text-align: center;
 
-content: 'x';
-    cursor: pointer;
-    display: flex;
-    right: calc(15% - 30px);
-    top: calc(100vh - 85vh - 33px);
-    background: #ededed;
-    width: 25px;
-    height: 25px;
+button{
+    position: fixed;
+    margin-top: -1.2rem;
+    margin-left: -1rem;
+    padding-bottom: 0.2rem;
+
+    background-color: #8BAEFE;
+    width: 35px;
+    height: 33px;
     border-radius: 50%;
-    line-height: 20px;
-    text-align: center;
-    border: 1px solid #999;
-    font-size: 20px;
+    line-height: 5px;
+    border: 2px solid black;
+    font-size: 22px;
+}
 `
 
 const Popup = props => {
@@ -59,8 +67,8 @@ const Popup = props => {
        <PopUp>
        {isOpen && (
          <Box>
-           <Close  onClick={() => setIsOpen(!isOpen)}>
-           <span className="close-icon" >x</span>
+           <Close >
+           <button onClick={() => setIsOpen(!isOpen)}>x</button>
            </Close>
            <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg"></img>
          </Box>

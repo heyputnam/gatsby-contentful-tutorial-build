@@ -7,7 +7,7 @@ import Popup from '../components/popup'
 
 
 const Container = styled.div`
-height: 65vw;
+height: 55vw;
 width: auto;
 `
 const Title = styled.h1`
@@ -46,6 +46,7 @@ margin-right: 31.6%;
 
 div{
   margin: 0;
+ 
 }
 `
 const UnderConstructionPage = () => {
@@ -70,10 +71,12 @@ const UnderConstructionPage = () => {
         </p>
         <Holder>
    
-    <Popup pictureBig={"https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg"} 
-   text={`but...
-   click here for a suprise!`}
+    <Popup pictureBig={"https://www.bobstewart.org.uk/sites/www.bobstewart.org.uk/files/styles/gallery_large/public/2020-04/patiently-waiting-like.jpg?itok=vvxQ2nWN"} 
+   text={"click to see how kermit feels.."}
   display={"none"}
+  background={"#68FE6D"}
+  color={'black'}
+
    />
 
         </Holder>

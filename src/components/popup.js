@@ -7,10 +7,10 @@ margin-left: 44%;
 margin-bottom: 2rem;
 background: transparent;
 border-color: transparent;
-
+width: 18%;
 img{
-  height: 7rem;
-  width: 10rem;
+  /* height: 7rem;
+  width: 10rem; */
   border-color: transparent;
  /* background: orange; */
  /* border: 5px;
@@ -80,18 +80,24 @@ button{
 }
 `
 
-const Popup = ({pictureBig, pictureSmall, text, message, display}) => {
+const Popup = ({
+  pictureBig, pictureSmall, text, message, 
+  display, background, color, textDisplay,
+   height, width}) => {
     const [isOpen, setIsOpen] = useState(false);
- 
-    const togglePopup = () => {
-      setIsOpen(!isOpen);
-    }
   return (
       <>
     <Open onClick={() => setIsOpen(!isOpen)} > 
-    <p>{text}</p>
+    <p style={{background:`${background}`, 
+    color: `${color}`,
+     display: `${textDisplay}`
+     }}>
+      {text}</p>
     <div style={{display:`${display}`}}>
-    <img src={pictureSmall}/>
+    <img height={height}
+     width={width} 
+     src={pictureSmall}
+     />
     </div>
    {message}
    </Open>
@@ -102,7 +108,7 @@ const Popup = ({pictureBig, pictureSmall, text, message, display}) => {
            <button onClick={() => setIsOpen(!isOpen)}>x</button>
            </Close>
            {/* example image "https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg" */}
-           <img src={pictureBig}/>
+           <img style={{height:`${height}`, width: `${width}`}} src={pictureBig}/>
          </Box>
        )}
        </PopUp>

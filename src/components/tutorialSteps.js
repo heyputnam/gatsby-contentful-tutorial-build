@@ -1,34 +1,22 @@
 // a page to test a new components/ options
 import React from "react";
 import Layout from '../globalStyle';
-import { useState, useEffect } from 'react';
-import { useStaticQuery, graphql} from 'gatsby';
 import { MARKS, INLINES} from '@contentful/rich-text-types';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import { CopyBlock, irBlack, tomorrowNight, CodeBlock	 } from 'react-code-blocks';
 import styled from 'styled-components';
 import ScrollToTop from "../components/scrollToTop";
-
 import Popup from '../components/popup'
 
 
 const Title = styled.h1`
-
-
 color: #3347C8;
 text-align: center;
-
 margin-top: 1.8rem;
-
-
 font-size: 3.5rem;
-
-
 `
-
 const Content = styled.div`
 height: 75vw;
-
 `
 const DirectionContainer = styled.div`
 margin-top: 11rem;
@@ -37,14 +25,11 @@ padding-bottom: 4rem;
   display: flex;
   width: 35%;
   height: auto;
-
-
   background: #fff;
   border-radius: 4px;
   padding: 20px;
   border: 1px solid #999;
   overflow: hidden;
-
 }
 .popup-box {
   position: absolute;
@@ -95,17 +80,12 @@ mark{
 
 `
 const Step = styled.div`
-
 margin-left: 4rem;
 margin-right: 4rem;
 margin-bottom: 2rem;
-
-
 `
 const ImageContainer = styled.div `
-
 margin-left: 33%;
-
 width: 30rem;
 img{
   align-items: center;
@@ -117,56 +97,13 @@ const Words = styled.div`
 margin-top: 2rem;
 font-size: 1.3rem;
 `
-const TutorialSteps = ({children}) =>{
-  const [direction, setDirection] = useState([
-    useStaticQuery(graphql`
-query stepQuery {
-  allContentfulLesson {
-    edges {
-      node {
-      
-        steps {
-            lesson {
-            name
-          }
-          steps {
-            name
-            photoExample {
-              fluid {
-                src
-              }
-            }
-            richDirections {
-              raw
-            }
-          }
-        
-        }
-      }
-    }
-  }
-}
-
-  
-
-
-
-`)
-])
-const  mapped = direction[0].allContentfulLesson.edges.map(
-  sec => (
-    sec.node.steps))
-const stepContent = mapped[0].map(s=>{
-  return(
-    s.steps
-  )
-})
-const name = mapped.map(s => {
-return (
-  s[0].lesson[0].name
-)
-})
-//   console.log(stepContent)
+const TutorialSteps = ({data}) =>{
+const steps = data
+const mapSteps = steps.contentfulLesson.steps.map(step => {
+    return(
+        step.steps
+        )
+    })
   const options = {
     renderNode: {
       // hyperlinks to web pages supported 
@@ -219,32 +156,21 @@ return (
     }
   }
   }
-  const [isOpen, setIsOpen] = useState(false);
- 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  }
- 
-
-    return (
+return (
 <>
 <Layout/>
 <ScrollToTop/>
 <div id="start"></div>
 <Top id="top">
 <Title>
-{name}
+{data.contentfulLesson.name}
 </Title>
 </Top>
-
 <Content>
-
 <DirectionContainer>
-
-  {stepContent.map(step=>{
+  {mapSteps.map(step=>{
     return(
       <>
-  
   <Name>
       <mark>{step.name}</mark>
   </Name>
@@ -254,13 +180,10 @@ return (
 pictureSmall={step.photoExample.fluid.src}
 message={"click to enlarge"}
 textDisplay={"none"}
- 
-/>
-    <Words>
-
+ />
+<Words>
     {renderRichText(step.richDirections, options)}
-   
-  </Words>
+</Words>
   </Step>
   </>
   )

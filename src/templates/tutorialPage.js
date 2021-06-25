@@ -27,7 +27,7 @@ const Content = styled.section`
 height: 100%;
 
 `
-const Tutorial = ({data}) =>{
+const Tutorial = ({data, name}) =>{
 
 return(
   
@@ -37,7 +37,7 @@ return(
        <TutorialPage>
      
       <Content>
-   <TutorialSteps/>
+   <TutorialSteps data={data} name={data.name}/>
        </Content>
       </TutorialPage>
   </Layout>
@@ -50,8 +50,27 @@ query ($slug: String!){
    contentfulLesson(slug: {eq: $slug}){
             name
             slug
-      }
-   }
+                steps {
+                    lesson {
+                    name
+                  }
+                  steps {
+                    name
+                    photoExample {
+                      fluid {
+                        src
+                      }
+                    }
+                    richDirections {
+                      raw
+                    }
+                  }
+                
+                }
+              }
+            }
+ 
+
 
 `
 

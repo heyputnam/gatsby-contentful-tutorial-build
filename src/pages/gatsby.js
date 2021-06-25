@@ -157,7 +157,7 @@ const TutorialsPage = ({children}) => {
       <TutorialList>
         <ListItem>
             <div className="container">
-      <AnchorLink to="/test/#top" >contentful and <mark>gatsby</mark> 101</AnchorLink>
+      <AnchorLink to="/tutorials/gatsby-contentful101/#top" >contentful and <mark>gatsby</mark> 101</AnchorLink>
             <div className="description">
                 <p>learn the basics of contentful with gatsby.js, using staticQueries, contentModels, and learning graphql</p>
             </div>

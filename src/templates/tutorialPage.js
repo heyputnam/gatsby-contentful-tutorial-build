@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../globalStyle'
 import styled from 'styled-components'
 import { graphql } from 'gatsby' 
-import Steps from '../components/exampleFull'
+import TutorialSteps from '../components/tutorialSteps'
 
 const TutorialPage = styled.section`
 height: 75vw;
@@ -37,10 +37,7 @@ return(
        <TutorialPage>
      
       <Content>
-     
-     <Steps 
-     header="🧠  🧠  get ready to start learning 🧠  🧠 "
-     />
+   <TutorialSteps/>
        </Content>
       </TutorialPage>
   </Layout>

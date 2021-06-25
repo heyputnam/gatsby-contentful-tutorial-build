@@ -68,6 +68,36 @@ link{
     cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
 }
 
+/* change default scroll bars to not show  */
+::-webkit-scrollbar {
+width: 0;
+
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px transparent; 
+    cursor:pointer ;
+    border-radius: 10px;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /* -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #d9bae8; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+    display: none;
+    cursor :pointer ;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    /* background: #f1defa;  */
+    cursor :pointer ;
+}
+
+
 `
 
 

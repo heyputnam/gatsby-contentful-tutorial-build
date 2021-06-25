@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import Layout from '../globalStyle'
 import gatsby from '../images/gatsby.png'
-
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 const TutorialList = styled.div`
 display: flex;
 /* justify-content: center; */
@@ -157,7 +157,7 @@ const TutorialsPage = ({children}) => {
       <TutorialList>
         <ListItem>
             <div className="container">
-            <li><a href="/test">contentful + <mark>gatsby</mark> 101</a></li>
+      <AnchorLink to="/test/#top" >contentful and <mark>gatsby</mark> 101</AnchorLink>
             <div className="description">
                 <p>learn the basics of contentful with gatsby.js, using staticQueries, contentModels, and learning graphql</p>
             </div>

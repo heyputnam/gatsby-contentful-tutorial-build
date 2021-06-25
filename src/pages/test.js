@@ -231,16 +231,17 @@ return (
 <>
 <Layout/>
 <ScrollToTop/>
-<Top>
+
+<Top id="top">
 <Title>
 {name}
 </Title>
 </Top>
-<div id="top">
 
-</div>
 <Content>
+
 <DirectionContainer>
+
   {stepContent.map(step=>{
     return(
       <>

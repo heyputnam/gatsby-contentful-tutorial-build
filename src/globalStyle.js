@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
 html{
     scroll-behavior: false;
-    cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
+   
 
 }
 
@@ -40,11 +40,13 @@ h1, h2, h3, h4, h5, h6{
 a{
     text-decoration: none;
     outline: none;
+    cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
 }
 
 button{
     border: none;
     outline: none;
+    cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
     &:focus{
         outline: none;
     }
@@ -52,6 +54,7 @@ button{
 
 *:focus{
     outline: none;
+    cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
 
 }
 
@@ -61,6 +64,9 @@ img{
     height: auto; 
 }
 
+link{
+    cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
+}
 
 `
 

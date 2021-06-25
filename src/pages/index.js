@@ -7,7 +7,7 @@ import photo from '../images/icon.png'
 import { useStaticQuery } from 'gatsby'
 const HomePage = styled.div`
 display: flex;
-height: 55vw;
+height: 60vw;
 justify-content: center;
 /* margin-top: 3rem; */
 background-color: black;

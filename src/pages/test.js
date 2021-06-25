@@ -78,7 +78,7 @@ width:  100%;
 position: fixed;
 top: 0;
 margin-top: 2.5rem;
-z-index: 1;
+z-index: 0;
 left: 0;
 right: 0;
 text-align: center;
@@ -249,13 +249,17 @@ return (
       <mark>{step.name}</mark>
   </Name>
   <Step>
-<ImageContainer>
-
-    <img src={step.photoExample.fluid.src}height="400" width="400"></img>
-    </ImageContainer>
+{/*  
+<ImageContainer> */}
+<Popup picture=
+{step.photoExample.fluid.src}height="400" width="400"
+/>
+    {/* </ImageContainer> */}
+  
     <Words>
-  <Popup/>
+
     {renderRichText(step.richDirections, options)}
+   
   </Words>
   </Step>
   </>

@@ -3,7 +3,24 @@ import styled from "styled-components";
 import {useState } from 'react'
 
 const Open = styled.button`
+margin-left: 44%;
+margin-bottom: 2rem;
+background: transparent;
+img{
+  height: 7rem;
+  width: 10rem;
+  
 
+}
+p{
+  background: #FE6969;
+  color: white;
+  padding: 1rem;
+  border-radius: 35px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  justify-content: center;
+}
 `
 const PopUp = styled.div`
 /* display: flex; */
@@ -13,6 +30,7 @@ const PopUp = styled.div`
     justify-content: center;
     z-index: 2;
     margin-left: -4rem;
+   
     
     
 `
@@ -25,6 +43,7 @@ const Box = styled.div`
     background: rgba(5, 5, 5, 0.85);
     padding: 27px;
     overflow: hidden;
+    
     img {
         padding: 1rem;
     }
@@ -50,7 +69,7 @@ button{
 }
 `
 
-const Popup = props => {
+const Popup = ({picture}) => {
     const [isOpen, setIsOpen] = useState(false);
  
     const togglePopup = () => {
@@ -59,18 +78,20 @@ const Popup = props => {
    
   return (
       <>
-    <Open
-    onClick={() => setIsOpen(!isOpen)}
-    data-toggle="modal"
-  
-   >open</Open>
+    <Open onClick={() => setIsOpen(!isOpen)}> 
+    {/* <p>click me for more</p> */}
+    <img src={picture}></img>
+    <div>click to enlarge</div>
+   </Open>
        <PopUp>
        {isOpen && (
          <Box>
-           <Close >
+           <Close>
            <button onClick={() => setIsOpen(!isOpen)}>x</button>
            </Close>
-           <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg"></img>
+           {/* example "https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg" */}
+           <img src={picture}></img>
+
          </Box>
        )}
        </PopUp>

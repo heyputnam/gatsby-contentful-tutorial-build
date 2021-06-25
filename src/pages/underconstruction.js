@@ -2,8 +2,14 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Layout from '../globalStyle'
 import styled from 'styled-components'
+import Popup from '../components/popup'
 
 
+
+const Container = styled.div`
+height: 65vw;
+width: auto;
+`
 const Title = styled.h1`
 text-align: center;
 margin-top: 5rem;
@@ -33,22 +39,49 @@ margin-top: 1rem;
     color: white;
 }
 `
+
+const Holder=styled.div`
+justify-content: center;
+margin-right: 31.6%;
+
+div{
+  margin: 0;
+}
+`
 const UnderConstructionPage = () => {
+  const hidden = ()=>{
+    return(
+      <img src="none" style={{display:"none"}}></img>
+    )
+  }
   return (
    <>
    <Layout>
- 
+
+
+    <Container>
       <Title><h1>We're working here!</h1></Title>
       <Extra>
      <p className="middle">   Sorry guys...
+ 
         <span role="img" aria-label="Pensive emoji">
           😔
         </span>
         </p>
+        <Holder>
+   
+    <Popup pictureBig={"https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg"} 
+   text={`but...
+   click here for a suprise!`}
+  display={"none"}
+   />
+
+        </Holder>
     <p> this page is still <mark>under construction</mark>.</p>
-    <p className="small">please <mark className="bottom">check back</mark> later or visit another <mark className="bottom">link</mark></p>
-     
+    <p className="small">please <mark className="bottom">check back</mark> later or visit another <mark className="bottom">link</mark> or...</p>
+
       </Extra>
+      </Container>
       </Layout>
   </>
   )

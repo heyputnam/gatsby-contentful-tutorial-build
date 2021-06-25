@@ -251,8 +251,9 @@ return (
   <Step>
 {/*  
 <ImageContainer> */}
-<Popup picture=
+<Popup pictureBig=
 {step.photoExample.fluid.src}height="400" width="400"
+pictureSmall={step.photoExample.fluid.src}height="400" width="400"
 />
     {/* </ImageContainer> */}
   

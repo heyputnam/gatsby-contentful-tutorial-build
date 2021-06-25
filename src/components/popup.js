@@ -6,9 +6,17 @@ const Open = styled.button`
 margin-left: 44%;
 margin-bottom: 2rem;
 background: transparent;
+border-color: transparent;
+
 img{
   height: 7rem;
   width: 10rem;
+  border-color: transparent;
+ /* background: orange; */
+ /* border: 5px;
+ color: transparent; */
+ 
+
   
 
 }
@@ -20,6 +28,8 @@ p{
   margin-top: 1rem;
   font-size: 1.2rem;
   justify-content: center;
+  border-color: transparent;
+
 }
 `
 const PopUp = styled.div`
@@ -46,6 +56,7 @@ const Box = styled.div`
     
     img {
         padding: 1rem;
+
     }
 
 `
@@ -69,19 +80,20 @@ button{
 }
 `
 
-const Popup = ({picture}) => {
+const Popup = ({pictureBig, pictureSmall, text, message, display}) => {
     const [isOpen, setIsOpen] = useState(false);
  
     const togglePopup = () => {
       setIsOpen(!isOpen);
     }
-   
   return (
       <>
-    <Open onClick={() => setIsOpen(!isOpen)}> 
-    {/* <p>click me for more</p> */}
-    <img src={picture}></img>
-    <div>click to enlarge</div>
+    <Open onClick={() => setIsOpen(!isOpen)} > 
+    <p>{text}</p>
+    <div style={{display:`${display}`}}>
+    <img src={pictureSmall}/>
+    </div>
+   {message}
    </Open>
        <PopUp>
        {isOpen && (
@@ -89,9 +101,8 @@ const Popup = ({picture}) => {
            <Close>
            <button onClick={() => setIsOpen(!isOpen)}>x</button>
            </Close>
-           {/* example "https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg" */}
-           <img src={picture}></img>
-
+           {/* example image "https://www.incimages.com/uploaded_files/image/1920x1080/getty_513189787_110007.jpg" */}
+           <img src={pictureBig}/>
          </Box>
        )}
        </PopUp>

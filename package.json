@@ -19,6 +19,7 @@
     "@fullpage/react-fullpage": "^0.1.19",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.6.2",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.7.0",
     "gatsby-plugin-offline": "^4.7.0",
     "gatsby-plugin-react-helmet": "^4.7.0",

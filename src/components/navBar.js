@@ -4,10 +4,17 @@ import styled from 'styled-components'
 const Headers = styled.header`
 display: flex;
 justify-content: space-between;
+height: 3rem;
 font-size: 1rem;
-margin: 1rem;
-margin-bottom: 0.1rem;
-
+padding-top: 0.5rem;
+/* margin: 1rem; */
+/* margin-bottom: 0.1rem; */
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+background: white;
+z-index: 1;
 
 
 `
@@ -18,14 +25,17 @@ display: flex;
 font-size: 1.7rem;
 a{
     color: black;
-    cursor: pointer;
+    cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
    
 }
 .home{
   background: #F2B790;
   width: 7rem;
   padding-left: 1.2rem;
-  margin-bottom: 0.4rem
+  margin-right: 1.2rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
+
 }
 
 a:not(:last-child){
@@ -40,7 +50,7 @@ const Title = styled.h1`
 letter-spacing: 5px;
 font-size: 1.7rem;
 color: #3347C8;
-
+margin-left: 0.5rem;
 `
 
 const DropDown = styled.div`
@@ -52,7 +62,7 @@ button{
   color: black;
   background-color: transparent;
   margin-right: 3rem;
-  cursor: pointer;
+  cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
 }
 
 &:hover .dropdown-content{
@@ -62,7 +72,7 @@ button{
     
     display: inline-block;
     /* width: 75%; */
-    cursor: pointer;
+    cursor: url("https://i.ibb.co/fStr5rr/index-finger.png"),  auto;
   }
 
 }
@@ -72,6 +82,7 @@ button{
 display: flex;
 flex-direction: column;
 position: absolute;
+cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
 
 a{
  display: none;

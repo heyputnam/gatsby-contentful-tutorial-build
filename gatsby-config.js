@@ -22,6 +22,13 @@ module.exports = {
     },
   },
   `gatsby-plugin-styled-components`,
+  {
+    resolve: "gatsby-plugin-anchor-links",
+    options: {
+      offset: -250,
+      duration: 1000
+    }
+  },
 
   `gatsby-plugin-split-css`,
 

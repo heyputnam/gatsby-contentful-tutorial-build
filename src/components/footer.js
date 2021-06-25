@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import github from '../images/github.png'
 import linkedin from '../images/linkedin.png'
 import email from '../images/email.png'
+import { useStaticQuery } from 'gatsby'
 const Foot = styled.footer`
 position: fixed;
 bottom: 0;
@@ -62,6 +63,7 @@ img{
 
 
 const Footer = () => {
+
     return(
         <>
         <Foot>

@@ -1,7 +1,9 @@
 import * as React from "react"
 import styled from "styled-components"
+import { useStaticQuery } from 'gatsby'
 import Layout from '../globalStyle'
 import gatsby from '../images/gatsby.png'
+import { useState } from 'react'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 const TutorialList = styled.div`
 display: flex;
@@ -141,6 +143,10 @@ height: 41vw;
 
 
 const TutorialsPage = ({children}) => {
+    
+ 
+
+    
     return (
     
 <>

@@ -9,6 +9,7 @@ exports.createPages = ({graphql, actions: { createPage }}) =>{
                              node {
                                 slug
                                  name
+                                 list
                                 }
                             }
                }

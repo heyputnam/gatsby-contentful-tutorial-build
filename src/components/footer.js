@@ -50,7 +50,7 @@ margin-right: 3rem;
 }
 
 a:last-child{
-margin-right: 0.7rem;
+margin-right: 1.5rem;
 }
 
 
@@ -58,6 +58,19 @@ margin-right: 0.7rem;
 img{
     width: 2rem;
     margin-bottom: 0.5rem;
+    background: #7EDCFE;
+    border-radius: 35px;
+    }
+
+
+img:hover{
+    display: flex;
+    margin: -0.3rem -0.5rem 0 0;
+    width: 2.9rem;
+  filter: saturate(800%) brightness(300%) hue-rotate(170deg);
+  transform: rotate(720deg);
+  transition: transform 2s ease-in-out;
+  
     }
 `
 

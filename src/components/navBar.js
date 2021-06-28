@@ -57,6 +57,8 @@ const DropDown = styled.div`
 z-index: 1;
 display: inline-block;
 height: 100%;
+
+
 button{
   font-size: 1.7rem;
   color: black;
@@ -66,10 +68,10 @@ button{
 }
 
 &:hover .dropdown-content{
+ 
   a{
     margin-top: 1.4rem;
-    color: #6D9BFE;
-    
+   
     display: inline-block;
     /* width: 75%; */
     cursor: url("https://i.ibb.co/fStr5rr/index-finger.png"),  auto;
@@ -78,14 +80,17 @@ button{
 }
 
 .dropdown-content{
-
+background-color: white;
 display: flex;
 flex-direction: column;
 position: absolute;
 cursor: url("https://i.ibb.co/rmMPSwz/index-finger-3.png" ), auto;
-
+width: 15rem;
+margin-top: 0.5rem;
+overflow: hidden;
 a{
  display: none;
+ color: #FE9646;
 }
 
 
@@ -97,8 +102,9 @@ margin-top: 0.6rem;
 margin-bottom: 0.6rem;
 padding-left: 1rem;
 
+
 font-size: 2.5rem;
-width: 90%;
+width: 25rem;
 
 
 

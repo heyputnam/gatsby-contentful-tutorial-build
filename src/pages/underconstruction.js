@@ -7,8 +7,8 @@ import Popup from '../components/popup'
 
 
 const Container = styled.div`
-height: 55vw;
-width: auto;
+/* height: 55vw;
+width: 100%; */
 `
 const Title = styled.h1`
 text-align: center;
@@ -20,9 +20,13 @@ font-size: 3rem;
 `
 
 const Extra = styled.div`
-text-align: center;
+/* display: flex;
+flex-direction: column; */
+justify-content: center;
+text-align: left;
 font-size: 2rem;
 margin-top: 1rem;
+
 
 .middle{
     font-size: 3rem;
@@ -41,8 +45,10 @@ margin-top: 1rem;
 `
 
 const Holder=styled.div`
-justify-content: center;
-margin-right: 31.6%;
+
+/* justify-content: center; */
+
+
 
 div{
   margin: 0;
@@ -69,8 +75,9 @@ const UnderConstructionPage = () => {
           😔
         </span>
         </p>
-        <Holder>
-   
+       
+   <div style={{ }}>
+     <Holder>
     <Popup pictureBig={"https://www.bobstewart.org.uk/sites/www.bobstewart.org.uk/files/styles/gallery_large/public/2020-04/patiently-waiting-like.jpg?itok=vvxQ2nWN"} 
    text={"click to see how kermit feels.."}
   display={"none"}
@@ -78,8 +85,9 @@ const UnderConstructionPage = () => {
   color={'black'}
 
    />
-
-        </Holder>
+   </Holder>
+</div>
+    
     <p> this page is still <mark>under construction</mark>.</p>
     <p className="small">please <mark className="bottom">check back</mark> later or visit another <mark className="bottom">link</mark> or...</p>
 

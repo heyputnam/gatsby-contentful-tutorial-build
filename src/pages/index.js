@@ -6,20 +6,18 @@ import ReactRotatingText from 'react-rotating-text'
 import photo from '../images/icon.png'
 import { useStaticQuery } from 'gatsby'
 const HomePage = styled.div`
-display: flex;
-/* position: fixed; */
-margin-top: 5rem;
-height: 90vh;
-
+position: fixed;
+height: 100rem;
+width: 100%;
 justify-content: center;
-/* margin-top: 3rem; */
+margin-top: -6rem;
 background-color: black;
 `
 const Title = styled.h1`
 margin-top: 10rem;
 margin-left: 2rem;
 margin-right: 2rem;
-font-size: 9.5rem;
+font-size: 9rem;
 text-align: center;
 color: white;
 
@@ -38,7 +36,8 @@ const IndexPage = ({word}) => {
     
     
    <>
-<Layout>
+<Layout/>
+
     <HomePage>
 
 
@@ -55,7 +54,9 @@ const IndexPage = ({word}) => {
 </Title>
 
      </HomePage>
-     </Layout>
+
+
+    
     </>
   )
 }

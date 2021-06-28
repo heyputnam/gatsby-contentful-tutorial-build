@@ -180,6 +180,7 @@ return (
 pictureSmall={step.photoExample.fluid.src}
 message={"click to enlarge"}
 textDisplay={"none"}
+
  />
 <Words>
     {renderRichText(step.richDirections, options)}
